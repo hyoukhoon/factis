@@ -1,3 +1,4 @@
+<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/dbcon.php";?>
 <!DOCTYPE html>
 <html lang="kr">
 
@@ -74,7 +75,7 @@
 				<div class="col-md-6 col-lg-4 align-self-center">
 					<div class="top_date_social text-right">
 						<div class="paper_date">
-							<p><?php echo date("Y.m.d");?></p>
+							<p><?php echo date("Y.m.d")."[".w_date(date("w"))."]";?></p>
 						</div>
 						<div class="social1">
 							<ul class="inline">
