@@ -416,9 +416,10 @@
 							<div class="slider_demo2">
 								<div class="single_post post_type6 xs-mb30">
 									<div class="post_img gradient1">
-										<img src="assets/img/header/sider-top.jpg" alt="">	<span class="tranding">
+										<!-- <img src="assets/img/header/sider-top.jpg" alt="">	<span class="tranding">
 											<i class="fas fa-play"></i>
-										</span>
+										</span> -->
+                                        <iframe width="730" height="500" src="https://www.youtube.com/embed/du4ivxAwfjc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									</div>
 									<div class="single_post_text">
 										<div class="meta meta_separator1">	<a href="#">TECHNOLOGY</a>
