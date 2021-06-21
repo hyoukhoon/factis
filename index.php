@@ -74,7 +74,7 @@
 				<div class="col-md-6 col-lg-4 align-self-center">
 					<div class="top_date_social text-right">
 						<div class="paper_date">
-							<p>Thursday, March 26, 2020</p>
+							<p><?php echo date("Y.m.d");?></p>
 						</div>
 						<div class="social1">
 							<ul class="inline">
