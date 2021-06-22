@@ -7,6 +7,11 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     <link href="navbar-top-fixed.css" rel="stylesheet">
     <title>Hello, world!</title>
   </head>
@@ -74,3 +79,26 @@
 
   </body>
 </html>
+
+<script>
+     $(document).ready(function() {
+      $('#summernote').summernote({
+        placeholder: '글을 입력해 주세요',
+        height: 400,
+        lang: 'ko-KR',
+        toolbar: [
+                    // [groupName, [list of button]]
+                    ['Font Style', ['fontname']],
+                    ['style', ['bold', 'italic', 'underline']],
+                    ['font', ['strikethrough']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['paragraph']],
+                    ['height', ['height']],
+                    ['Insert', ['picture']],
+                    ['Insert', ['link']],
+                    ['Misc', ['fullscreen']]
+                 ]
+      });
+    });
+  </script>
