@@ -64,7 +64,7 @@
                                         <input type="file" multiple class="form-input" name="afile" id="afile" />
                                     </div>
                                 </div>
-                                <button type="button" class="btn contact-btn"  onclick="saveUp();">WRITE</button>
+                                <button type="button" class="btn btn-dark"  onclick="saveUp();">WRITE</button>
                             </form>
                         </div>
                     </div>
