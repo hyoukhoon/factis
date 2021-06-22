@@ -112,7 +112,8 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-                
+                <main>
+                    <div class="container-fluid px-4">
                     <h1 class="mt-4">글 올리기</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
@@ -142,7 +143,8 @@
 
                     </form>
                         
-                
+                    </div>
+                </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
@@ -166,6 +168,7 @@
       $('#summernote').summernote({
         placeholder: '글을 입력해 주세요',
         height: 400,
+        width: 80%,
         lang: 'ko-KR',
         toolbar: [
                     // [groupName, [list of button]]
