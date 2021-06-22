@@ -168,7 +168,7 @@
       $('#summernote').summernote({
         placeholder: '글을 입력해 주세요',
         height: 400,
-        width: 80%,
+        width: 400,
         lang: 'ko-KR',
         toolbar: [
                     // [groupName, [list of button]]
