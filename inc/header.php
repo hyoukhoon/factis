@@ -104,7 +104,7 @@
 			<div class="row">
 				<div class="col-lg-4 align-self-center">
 					<div class="logo">
-						<a href="index.html">
+						<a href="/">
 							<img src="/assets/img/logo/logo.png" alt="image">
 						</a>
 					</div>
@@ -133,7 +133,7 @@
 							<ul id="newsprk_menu">
 								<li><a href="#">Home <i class="fal fa-angle-down"></i></a>
 									<ul>
-										<li><a href="index.html">Home 1 <i class="fal fa-angle-right"></i></a>
+										<li><a href="/">Home 1 <i class="fal fa-angle-right"></i></a>
 											<ul>
 												<li><a href="index2.html">Version 1</a>
 												</li>
@@ -145,7 +145,7 @@
 												</li>
 											</ul>
 										</li>
-										<li><a href="dark/index.html">Home 2 <i class="fal fa-angle-right"></i></a>
+										<li><a href="dark//">Home 2 <i class="fal fa-angle-right"></i></a>
 											<ul>
 												<li><a href="dark/index2.html">Version 1</a>
 												</li>
@@ -157,7 +157,7 @@
 												</li>
 											</ul>
 										</li>
-										<li><a href="theme-3/index.html">Home 3 <i class="fal fa-angle-right"></i></a>
+										<li><a href="theme-3//">Home 3 <i class="fal fa-angle-right"></i></a>
 											<ul>
 												<li><a href="theme-3/index2.html">Version 1</a>
 												</li>
@@ -169,7 +169,7 @@
 												</li>
 											</ul>
 										</li>
-										<li><a href="theme-4/index.html">Home 4 <i class="fal fa-angle-right"></i></a>
+										<li><a href="theme-4//">Home 4 <i class="fal fa-angle-right"></i></a>
 											<ul>
 												<li><a href="theme-4/index2.html">Version 1</a>
 												</li>
