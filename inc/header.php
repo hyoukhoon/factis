@@ -9,16 +9,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--::::: FABICON ICON :::::::-->
-	<link rel="icon" href="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/img/icon/fabicon.png">
+	<link rel="icon" href="/assets/img/icon/fabicon.png">
 	<!--::::: ALL CSS FILES :::::::-->
-	<link rel="stylesheet" href="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/css/plugins/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/css/plugins/animate.min.css">
-	<link rel="stylesheet" href="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/css/plugins/fontawesome.css">
-	<link rel="stylesheet" href="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/css/plugins/modal-video.min.css">
-	<link rel="stylesheet" href="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/css/plugins/owl.carousel.css">
-	<link rel="stylesheet" href="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/css/plugins/slick.css">
-	<link rel="stylesheet" href="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/css/plugins/stellarnav.css">
-	<link rel="stylesheet" href="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/css/theme.css">
+	<link rel="stylesheet" href="/assets/css/plugins/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/plugins/animate.min.css">
+	<link rel="stylesheet" href="/assets/css/plugins/fontawesome.css">
+	<link rel="stylesheet" href="/assets/css/plugins/modal-video.min.css">
+	<link rel="stylesheet" href="/assets/css/plugins/owl.carousel.css">
+	<link rel="stylesheet" href="/assets/css/plugins/slick.css">
+	<link rel="stylesheet" href="/assets/css/plugins/stellarnav.css">
+	<link rel="stylesheet" href="/assets/css/theme.css">
 </head>
 
 <body class="theme-1">
@@ -105,14 +105,14 @@
 				<div class="col-lg-4 align-self-center">
 					<div class="logo">
 						<a href="index.html">
-							<img src="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/img/logo/logo.png" alt="image">
+							<img src="/assets/img/logo/logo.png" alt="image">
 						</a>
 					</div>
 				</div>
 				<div class="col-lg-8 align-self-center">
 					<div class="banner1">
 						<a href="#">
-							<img src="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/img/bg/banner1.png" alt="">
+							<img src="/assets/img/bg/banner1.png" alt="">
 						</a>
 					</div>
 				</div>
@@ -298,7 +298,7 @@
 							<div class="temp d-none d-lg-block">
 								<div class="temp_wap">
 									<div class="temp_icon">
-										<img src="<?php echo $_SERVER["DOCUMENT_ROOT"];?>/assets/img/icon/temp.png" alt="">
+										<img src="/assets/img/icon/temp.png" alt="">
 									</div>
 									<h3 class="temp_count">13</h3>
 									<p>San Francisco</p>
