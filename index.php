@@ -18,7 +18,7 @@
 							<div class="meta3">	<a href="#">TECHNOLOGY</a>
 								<a href="#">March 26, 2020</a>
 							</div>
-							<h4><a href="post1.html">There may be no consoles in the future ea exec says</a></h4>
+							<h4><a href="post.php">There may be no consoles in the future ea exec says</a></h4>
 							<div class="space-10"></div>
 							<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
 						</div>
