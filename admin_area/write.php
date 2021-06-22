@@ -109,6 +109,30 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
+
+                    <form action="#" method="post">
+                            
+                            <input type="hidden" name="imgUrl" id="imgUrl" value="">
+                            <input type="hidden" name="attachFile" id="attachFile" value="">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="subject" placeholder="제목">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="childName" placeholder="태그">
+                                </div>
+                                <div class="form-group">
+                                <div id="summernote"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div id="attach_site">
+                                        <div id="attachFiles">
+                                        </div>
+                                        <input type="file" multiple class="form-input" name="afile" id="afile" />
+                                    </div>
+                                </div>
+                                <button type="button" class="btn contact-btn"  onclick="saveUp();">WRITE</button>
+                                
+                    </form>
                         
                     </div>
                 </main>
