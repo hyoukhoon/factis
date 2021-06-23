@@ -14,7 +14,7 @@
                                     <input type="text" class="form-control" id="subject" placeholder="제목">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="childName" placeholder="태그">
+                                    <input type="text" class="form-control" id="youtube" placeholder="유튜브링크">
                                 </div>
                                 <div class="form-group">
                                 <div id="summernote"></div>
@@ -97,8 +97,8 @@ function sendFile($summernote, file) {
 function saveUp(){
 
 		var subject=$("#subject").val();
-		var childName=$("#childName").val();
-        var multi=$("#multi").val();
+		var youtube=$("#youtube").val();
+    var multi=$("#multi").val();
 		var imgUrl=$("#imgUrl").val();
     var attachFile=$("#attachFile").val();
 		var content=$('#summernote').summernote('code');
@@ -115,7 +115,7 @@ function saveUp(){
 
 
 
-		var params = "subject="+subject+"&content="+content+"&childName="+childName+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile;
+		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile;
 		//console.log(params);
 
 		$.ajax({

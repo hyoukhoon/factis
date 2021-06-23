@@ -12,7 +12,7 @@ $name=$_SESSION['loginValue']['SUNAME'];
 $multi=$_GET["multi"]??$_POST["multi"];
 
 	$subject=removeHackTag($_POST['subject']);
-	$childName=removeHackTag($_POST['childName']);
+	$youtube=removeHackTag($_POST['youtube']);
 	$imgUrl=$_POST['imgUrl'];
     $attachFile=$_POST['attachFile'];
 	$content=$_POST['content'];
@@ -33,7 +33,7 @@ $multi=$_GET["multi"]??$_POST["multi"];
         ('$name',
         '$email',
         '$subject',
-        '$childName',
+        '$youtube',
         '$imgUrl',
         '$attachFile',
         '$content',
