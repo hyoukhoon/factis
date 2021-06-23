@@ -173,6 +173,7 @@ function attachFile(file) {
               attachFie=attachFie+",";
             }
             $("#attachFie").val(attachFie+data);
+            console.log("att=>"+$("#attachFie").val());
           }
         }
     });
