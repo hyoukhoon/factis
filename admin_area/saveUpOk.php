@@ -38,7 +38,8 @@ $multi=$_GET["multi"]??$_POST["multi"];
         '$attachFile',
         '$content',
         '$multi');";
-
+    echo $query;
+    exit;
 	$sql1=$mysqli->query($query) or die("3:".$mysqli->error);
 
 
