@@ -50,13 +50,20 @@ while($rs = $result->fetch_object()){
   <tbody>
 <?php
     foreach($rsc as $p){
+        $img="";
         $img=explode(",",$p->file_list);
 ?>      
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><input type="checkbox" name="num[]" id="n_<?php echo $p->num;?>" value="<?php echo $p->num;?>"></th>
+        <td>
+            <?php 
+                if(!empty($img)){
+            ?>
+                <a href="view.php?num=<?php echo $p->num;?>"><img src="<?php echo $img[0];?>"></a>
+            <?php }?>
+        </td>
+        <td><?php echo $p->subject;?></td>
+        <td><?php echo date("Y.m.d",strtotime($p->reg_date));?></td>
     </tr>
 <?php 
 }?>    
@@ -94,9 +101,9 @@ while($rs = $result->fetch_object()){
                     </div>
                 </div>
 
-<div>
+<div style="float:right;">
     <a href="write.php">
-    <button type="button" class="btn btn-secondary">등록</button>
-</a>
+        <button type="button" class="btn btn-secondary">등록</button>
+    </a>
 </div>
 <?php include $_SERVER["DOCUMENT_ROOT"]."/admin_area/footer.php";?>  
