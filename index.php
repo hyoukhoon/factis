@@ -12,7 +12,7 @@ $rs = $result->fetch_object();
 					<div class="single_post post_type3">
 						<div class="post_img">
 							<div class="img_wrap">
-								<img src="assets/img/trending/trendbig1.jpg" alt="">
+								<?php echo $rs->url;?>
 							</div>	<span class="tranding">
 								<i class="fas fa-bolt"></i>
 							</span>
