@@ -23,8 +23,8 @@ while($rs = $result->fetch_object()){
 							</span>
 						</div>
 						<div class="single_post_text">
-							<div class="meta3">	<a href="#">TECHNOLOGY</a>
-								<a href="#">March 26, 2020</a>
+							<div class="meta3">	<a href="#">대통령</a>
+								<a href="#"><?php echo date("Y.m.d",strtotime($p->reg_date));?></a>
 							</div>
 							<h4><a href="post.php"><?php echo $p->subject;?></a></h4>
 							<div class="space-10"></div>
