@@ -90,9 +90,7 @@ while($rs = $result->fetch_object()){
                             <?php }?>
                             </ul>
                         </nav>
-                        <div class="page-status">
-                            <a href="/admin_area/write.php?multi=<?php echo $multi;?>"><button type="button" class="btn btn-primary">WRITE</button></a>
-                        </div>
+
                     </div>
                 </div>
 
