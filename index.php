@@ -1,9 +1,6 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
 $result = $mysqli->query("select * from news order by num desc");
 $rs = $result->fetch_object();
-echo "<pre>";
-print_r($rs);
-exit;
 ?>
 <!--::::: TRANDING CAROUSEL AREA START :::::::-->
 	<div class="container">
