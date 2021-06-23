@@ -1,5 +1,7 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/admin_area/header.php";?>  
-
+<div>
+<h3>뉴스리스트</h3>
+</div>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -29,5 +31,9 @@
     </tr>
   </tbody>
 </table>
-
+<div>
+    <a href="write.php">
+    <button type="button" class="btn btn-secondary">등록</button>
+</a>
+</div>
 <?php include $_SERVER["DOCUMENT_ROOT"]."/admin_area/footer.php";?>  
