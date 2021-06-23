@@ -1,5 +1,5 @@
 <?php session_start();
-include $_SERVER['DOCUMENT_ROOT']."/inc/dbconn.php";
+include $_SERVER['DOCUMENT_ROOT']."/inc/dbcon.php";
 
 // if(!$_SESSION['loginValue']['SEMAIL']){
 //     $data=array("result"=>-1,"val"=>"로그인하십시오."); 
