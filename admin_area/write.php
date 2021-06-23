@@ -168,12 +168,12 @@ function attachFile(file) {
           }else{
             var img="<img src='"+data+"' width='50'><br>";
             $("#attachFiles").append(img);
-            var attachFie=$("#attachFie").val();
-            if(attachFie){
-              attachFie=attachFie+",";
+            var attachFile=$("#attachFile").val();
+            if(attachFile){
+              attachFile=attachFile+",";
             }
-            $("#attachFie").val(attachFie+data);
-            console.log("att=>"+$("#attachFie").val());
+            $("#attachFile").val(attachFile+data);
+
           }
         }
     });
