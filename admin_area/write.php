@@ -163,7 +163,7 @@ function saveUp(){
 
 
 		var params = "subject="+subject+"&content="+content+"&childName="+childName+"&imgUrl="+imgUrl+"&multi="+multi;
-		console.log(params);
+		//console.log(params);
 
 		$.ajax({
 			  type: 'post'
