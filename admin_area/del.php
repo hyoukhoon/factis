@@ -10,7 +10,7 @@ $num=$_GET['num'];
 	if($file){
 		$delFile=explode(",",$file);
 		for($i=0;$i<sizeof($delFile);$i++){
-			unlink($_SERVER['DOCUMENT_ROOT'].$delFile[$i]);
+			unlink($_SERVER['DOCUMENT_ROOT'].trim($delFile[$i]));
 		}
 	}
 	
