@@ -127,7 +127,7 @@ function saveUp(){
 
 				if(data.result==1){
 					alert('등록됐습니다.');
-					location.href='/admin_area/write.php?multi=<?php echo $multi;?>'
+					location.href='/admin_area/list.php?multi=<?php echo $multi;?>'
 				}else if(data.result==-1){
 					alert(data.val);
 					return;
