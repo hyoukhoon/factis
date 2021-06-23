@@ -1,7 +1,7 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/admin_area/header.php";?>
-<div>
+<p>
 <h3>뉴스 등록및수정</h3>
-</div>
+</p>
     <div class="col-12 col-md-12 item">
                         <div class="contact-form wow fadeInUpBig" data-wow-delay="0.6s">
                             

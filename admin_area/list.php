@@ -1,8 +1,8 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/admin_area/header.php";?>  
-<div>
+<p>
 <h3>뉴스리스트</h3>
-</div>
-<table class="table table-hover">
+</p>
+<table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
