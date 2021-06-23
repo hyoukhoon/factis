@@ -65,8 +65,8 @@ while($rs = $result->fetch_object()){
 </table>
 
 <!-- 페이징 -->
-<div class="col-12">
-                    <div class="pagination-area d-sm-flex mt-15">
+                <div>
+                    <div class="pagination-area">
                         <nav aria-label="#">
                             <ul class="pagination">
                             <?php if($f_no!=1){?>
