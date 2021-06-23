@@ -1,6 +1,8 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
-$result = $mysqli->query("select * from news order by num desc");
-$rs = $result->fetch_object();
+$result = $mysqli->query("select * from news order by num desc limit 2");
+while($rs = $result->fetch_object()){
+	$rsc[]=$rs;
+}
 ?>
 <!--::::: TRANDING CAROUSEL AREA START :::::::-->
 	<div class="container">
@@ -9,10 +11,13 @@ $rs = $result->fetch_object();
 				<h2 class="widget-title">Trending News</h2>
 				<div class="carousel_post2_type3 nav_style1 owl-carousel">
 					<!--CAROUSEL START-->
+				<?php
+					foreach($rsc as $p){
+				?>
 					<div class="single_post post_type3">
 						<div class="post_img">
 							<div class="img_wrap">
-								<?php echo $rs->url;?>
+								<?php echo $p->url;?>
 							</div>	<span class="tranding">
 								<i class="fas fa-bolt"></i>
 							</span>
@@ -21,11 +26,13 @@ $rs = $result->fetch_object();
 							<div class="meta3">	<a href="#">TECHNOLOGY</a>
 								<a href="#">March 26, 2020</a>
 							</div>
-							<h4><a href="post.php">There may be no consoles in the future ea exec says</a></h4>
+							<h4><a href="post.php"><?php echo $p->subject;?></a></h4>
 							<div class="space-10"></div>
 							<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
 						</div>
 					</div>
+				<?php
+				}?>
 					<div class="single_post post_type3">
 						<div class="post_img">
 							<div class="img_wrap">
