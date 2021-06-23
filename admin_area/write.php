@@ -14,7 +14,7 @@
                                     <input type="text" class="form-control" id="subject" placeholder="제목">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="youtube" placeholder="유튜브링크">
+                                    <textarea id="youtube" rows="5">유튜브링크</textarea>
                                 </div>
                                 <div class="form-group">
                                 <div id="summernote"></div>
