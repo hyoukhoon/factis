@@ -42,8 +42,8 @@ $multi=$_GET["multi"]??$_POST["multi"];
         '$content',
         '$multi');";
 
-        echo $query;
-        exit;
+        // echo $query;
+        // exit;
 
 	$sql1=$mysqli->query($query) or die("3:".$mysqli->error);
 
