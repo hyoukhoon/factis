@@ -1,5 +1,15 @@
+<?php session_start();
+include $_SERVER['DOCUMENT_ROOT']."/inc/dbcon.php";
+
+//  if(!$_SESSION['loginValue']['SEMAIL']){
+//  	$data=array("result"=>-1,"val"=>"로그인하십시오."); 
+//  	echo json_encode($data);
+//  	exit;
+//  }
+
+?>
 <!doctype html>
-<html lang="en">
+<html lang="kr">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">

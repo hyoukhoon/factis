@@ -58,7 +58,8 @@ while($rs = $result->fetch_object()){
       <td>Otto</td>
       <td>@mdo</td>
     </tr>
-<?php }?>    
+<?php 
+}?>    
 
   </tbody>
 </table>
@@ -90,7 +91,7 @@ while($rs = $result->fetch_object()){
                             </ul>
                         </nav>
                         <div class="page-status">
-                            <a href="/board/write.php?multi=<?php echo $multi;?>"><button type="button" class="btn btn-primary">WRITE</button></a>
+                            <a href="/admin_area/write.php?multi=<?php echo $multi;?>"><button type="button" class="btn btn-primary">WRITE</button></a>
                         </div>
                     </div>
                 </div>
