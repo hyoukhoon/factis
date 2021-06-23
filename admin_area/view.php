@@ -35,8 +35,16 @@ $rs = $result->fetch_object();
                                             if($rs->fn1){
                                         ?>
                                         <br>
-                                        첨부파일 : <a href="/news/upImages/<?=$rs->fn1?>" target="_blank"><?php echo $rs->fn_name1;?></a>
+                                        첨부파일 : 
+                                        <?php
+                                            $fn=explode(",",$rs->fn1);
+                                            foreach($fn as $f){
+                                        ?>
+                                        <a href="<?=$f?>" target="_blank">
+                                                <?php echo $f;?>
+                                    </a>
                                         <?
+                                            }
                                         }
                                         ?>
                                 </td>
