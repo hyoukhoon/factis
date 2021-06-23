@@ -1,5 +1,5 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
-$result = $mysqli->query("select * from news order by id desc");
+$result = $mysqli->query("select * from news order by num desc");
 $rs = $result->fetch_object();
 ?>
 <!--::::: TRANDING CAROUSEL AREA START :::::::-->
