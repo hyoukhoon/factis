@@ -42,9 +42,9 @@ while($rs = $result->fetch_object()){
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">썸네일</th>
+      <th scope="col">제목</th>
+      <th scope="col">등록일</th>
     </tr>
   </thead>
   <tbody>
