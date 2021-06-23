@@ -62,7 +62,7 @@ while($rs = $result->fetch_object()){
                 <a href="view.php?num=<?php echo $p->num;?>"><img src="<?php echo $img[0];?>" width="50"></a>
             <?php }?>
         </td>
-        <td><?php echo $p->subject;?></td>
+        <td><a href="view.php?num=<?php echo $p->num;?>"><?php echo $p->subject;?></a></td>
         <td><?php echo date("Y.m.d",strtotime($p->reg_date));?></td>
     </tr>
 <?php 
