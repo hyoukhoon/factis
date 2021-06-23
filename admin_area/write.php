@@ -100,6 +100,7 @@ function saveUp(){
 		var childName=$("#childName").val();
         var multi=$("#multi").val();
 		var imgUrl=$("#imgUrl").val();
+    var attachFile=$("#attachFile").val();
 		var content=$('#summernote').summernote('code');
 
 		if(!subject){
@@ -114,7 +115,7 @@ function saveUp(){
 
 
 
-		var params = "subject="+subject+"&content="+content+"&childName="+childName+"&imgUrl="+imgUrl+"&multi="+multi;
+		var params = "subject="+subject+"&content="+content+"&childName="+childName+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile;
 		//console.log(params);
 
 		$.ajax({
