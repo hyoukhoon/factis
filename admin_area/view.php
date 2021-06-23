@@ -39,11 +39,13 @@ $rs = $result->fetch_object();
                                         <?php
                                             $fn=explode(",",$rs->fn1);
                                             foreach($fn as $f){
+                                                $k=1;
                                         ?>
                                         <a href="<?=$f?>" target="_blank">
-                                                <?php echo $f;?>
+                                                첨부파일<?php echo $k;?>
                                     </a>
-                                        <?
+                                        <?php
+                                            $k++;
                                             }
                                         }
                                         ?>
