@@ -44,8 +44,22 @@ $rs = $result->fetch_object();
 
                             </tbody>
                             </table>
+                            <div style="float:right;">
+    <a href="write.php">
+        <a href="list.php">
+            <button type="button" class="btn btn-secondary">목록</button>
+        </a>
+        <a href="edit.php?num=<?php echo $rs->num;?>">
+            <button type="button" class="btn btn-secondary">수정</button>
+        </a>
+        <a href="del.php?num=<?php echo $rs->num;?>" onclick="return confirm('삭제하시겠습니까?');">
+            <button type="button" class="btn btn-secondary">삭제</button>
+        </a>
+    </a>
+</div>
+
                         </div>
-                            
+                        
                         </div>
                     </div>
       
