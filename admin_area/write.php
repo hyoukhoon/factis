@@ -162,24 +162,18 @@ function attachFile(file) {
         processData: false,
         type: 'POST',
         success: function (data) {
-			if(data==-1){
-				alert('용량이 너무크거나 이미지 파일이 아닙니다.');
-				return;
-			}else{
-                var img="<img src='"+data+"' width='50'><br>";
-                $("#attachFiles").append(img);
-				
-                //$summernote.summernote('insertImage', data, function //($image) {
-				//	$image.attr('src', data);
-				//	$image.attr('class', 'childImg');
-				//});
-
-				var attachFie=$("#attachFie").val();
-				if(attachFie){
-					attachFie=attachFie+",";
-				}
-				$("#attachFie").val(attachFie+data);
-			}
+          if(data==-1){
+            alert('용량이 너무크거나 이미지 파일이 아닙니다.');
+            return;
+          }else{
+            var img="<img src='"+data+"' width='50'><br>";
+            $("#attachFiles").append(img);
+            var attachFie=$("#attachFie").val();
+            if(attachFie){
+              attachFie=attachFie+",";
+            }
+            $("#attachFie").val(attachFie+data);
+          }
         }
     });
 
