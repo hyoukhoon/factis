@@ -34,22 +34,8 @@ while($rs = $result->fetch_object()){
 				<?php
 				}?>
 					
-					<div class="single_post post_type3">
-						<div class="post_img">
-							<div class="img_wrap">
-								<img src="assets/img/trending/trendbig2.jpg" alt="">
-							</div>
-						</div>
-						<div class="single_post_text">
-							<div class="meta3">	<a href="#">TECHNOLOGY</a>
-								<a href="#">March 26, 2020</a>
-							</div>
-							<h4><a href="post1.html">Copa America: Luis Suarez from devastated US</a></h4>
-							<div class="space-10"></div>
-							<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
-						</div>
-					</div>
 					
+
 				</div>
 				<div class="border_black"></div>
 				<div class="space-30"></div>
