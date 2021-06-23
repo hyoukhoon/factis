@@ -59,6 +59,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div id="attach_site">
+                                      썸네일 : 
                                         <div id="attachFiles">
                                         </div>
                                         <input type="file" multiple class="form-input" name="afile" id="afile" />
@@ -175,7 +176,7 @@ function saveUp(){
 
 				if(data.result==1){
 					alert('등록됐습니다.');
-					location.href='/write.php?multi=<?php echo $multi;?>'
+					location.href='/admin_area/write.php?multi=<?php echo $multi;?>'
 				}else if(data.result==-1){
 					alert(data.val);
 					return;
