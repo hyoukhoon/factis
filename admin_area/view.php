@@ -37,9 +37,10 @@ $rs = $result->fetch_object();
                                         <br>
                                         첨부파일 : 
                                         <?php
+                                            $k=1;
                                             $fn=explode(",",$rs->fn1);
                                             foreach($fn as $f){
-                                                $k=1;
+                                                
                                         ?>
                                         <a href="<?=$f?>" target="_blank">
                                                 첨부파일<?php echo $k;?>
