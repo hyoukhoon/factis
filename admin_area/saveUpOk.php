@@ -14,6 +14,7 @@ $multi=$_GET["multi"]??$_POST["multi"];
 	$subject=removeHackTag($_POST['subject']);
 	$childName=removeHackTag($_POST['childName']);
 	$imgUrl=$_POST['imgUrl'];
+    $attachFile=$_POST['attachFile'];
 	$content=$_POST['content'];
 	$content=addslashes($content);
 
@@ -25,6 +26,7 @@ $multi=$_GET["multi"]??$_POST["multi"];
         `subject`,
         `url`,
         `file_list`,
+        `fn1`,
         `content`,
         `multi`)
         VALUES
@@ -33,6 +35,7 @@ $multi=$_GET["multi"]??$_POST["multi"];
         '$subject',
         '$childName',
         '$imgUrl',
+        '$attachFile',
         '$content',
         '$multi');";
 
