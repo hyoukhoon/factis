@@ -11,10 +11,13 @@
                             <input type="hidden" name="imgUrl" id="imgUrl" value="">
                             <input type="hidden" name="attachFile" id="attachFile" value="">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="subject" placeholder="제목">
+                                    제목 : <input type="text" class="form-control" id="subject" placeholder="제목">
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" id="youtube" rows="3">유튜브링크</textarea>
+                                    유튜브링크 : <textarea class="form-control" id="youtube" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    간략글 : <textarea class="form-control" id="main_text" rows="3"></textarea>
                                 </div>
                                 <div class="form-group">
                                 <div id="summernote"></div>
@@ -98,6 +101,8 @@ function saveUp(){
 
 		var subject=$("#subject").val();
 		var youtube=$("#youtube").val();
+    var main_text=$("#main_text").val();
+    
     var multi=$("#multi").val();
 		var imgUrl=$("#imgUrl").val();
     var attachFile=$("#attachFile").val();
@@ -115,7 +120,7 @@ function saveUp(){
 
 
 
-		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile;
+		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile;
 		//console.log(params);
 
 		$.ajax({

@@ -12,7 +12,8 @@ $name=$_SESSION['loginValue']['SUNAME'];
 $multi=$_GET["multi"]??$_POST["multi"];
 
 	$subject=removeHackTag($_POST['subject']);
-	$youtube=removeHackTag($_POST['youtube']);
+	$youtube=$_POST['youtube'];
+    $main_text=removeHackTag($_POST['main_text']);
 	$imgUrl=$_POST['imgUrl'];
     $attachFile=$_POST['attachFile'];
 	$content=$_POST['content'];
@@ -26,6 +27,7 @@ $multi=$_GET["multi"]??$_POST["multi"];
         `subject`,
         `url`,
         `file_list`,
+        `main_text`,
         `fn1`,
         `content`,
         `multi`)
@@ -35,12 +37,13 @@ $multi=$_GET["multi"]??$_POST["multi"];
         '$subject',
         '$youtube',
         '$imgUrl',
+        '$main_text',
         '$attachFile',
         '$content',
         '$multi');";
 
-        // echo $query;
-        // exit;
+        echo $query;
+        exit;
 
 	$sql1=$mysqli->query($query) or die("3:".$mysqli->error);
 
