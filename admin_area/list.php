@@ -59,7 +59,7 @@ while($rs = $result->fetch_object()){
             <?php 
                 if(!empty($img)){
             ?>
-                <a href="view.php?num=<?php echo $p->num;?>"><img src="<?php echo $img[0];?>"></a>
+                <a href="view.php?num=<?php echo $p->num;?>"><img src="<?php echo $img[0];?>" width="50"></a>
             <?php }?>
         </td>
         <td><?php echo $p->subject;?></td>
