@@ -34,8 +34,8 @@ $rs = $result->fetch_object();
                                 <td ><?echo stripslashes($rs->subject);?></td>
                                 </tr>
                                 <tr>
-                                <th class="color_ch" scope="row">태그</th>
-                                <td ></td>
+                                <th class="color_ch" scope="row">메인텍스트</th>
+                                <td ><?echo stripslashes($rs->main_text);?></td>
                                 </tr>
                                 <tr>
                                 <th class="color_ch" scope="row">내용</th>
