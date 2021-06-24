@@ -596,4 +596,5 @@ while($rs = $result->fetch_object()){
     </a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<script src="/inc/datatables-simple-demo.js"></script>
 <?php include $_SERVER["DOCUMENT_ROOT"]."/admin_area/footer.php";?>  
