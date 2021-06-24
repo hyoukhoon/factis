@@ -70,7 +70,7 @@ $rs = $result->fetch_object();
         <a href="list.php">
             <button type="button" class="btn btn-secondary">목록</button>
         </a>
-        <a href="edit.php?num=<?php echo $rs->num;?>">
+        <a href="write.php?num=<?php echo $rs->num;?>">
             <button type="button" class="btn btn-secondary">수정</button>
         </a>
         <a href="del.php?num=<?php echo $rs->num;?>" onclick="return confirm('삭제하시겠습니까?');">
