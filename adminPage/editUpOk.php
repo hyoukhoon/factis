@@ -21,6 +21,7 @@ $multi=$_GET["multi"]??$_POST["multi"];
     $attachFile=$_POST['attachFile'];
 	$content=$_POST['content'];
 	$content=addslashes($content);
+    $num=$_POST['num'];
 
 	$mysqli->autocommit(FALSE);
 
@@ -30,11 +31,11 @@ $multi=$_GET["multi"]??$_POST["multi"];
         file_list='".$imgUrl."',
         main_text='".$main_text."',
         fn1='".$attachFile."v',
-        content'".$content."' 
+        content='".$content."' 
         where num=".$num;
 
-        echo $query;
-        exit;
+        // echo $query;
+        // exit;
 
 	$sql1=$mysqli->query($query) or die("3:".$mysqli->error);
 
