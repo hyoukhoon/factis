@@ -709,5 +709,12 @@
                 </div>
                 <!-- /.container-fluid -->
 
+                <!-- Page level plugins -->
+    <script src="/adminPage/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/adminPage/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/adminPage/js/demo/datatables-demo.js"></script>
+
 <?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";
 ?>
