@@ -74,7 +74,7 @@ if($num){
 
             </div>
             <!-- End of Main Content -->
-
+<br><br><br><br><br>
 <?php //include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";            ?>            
 
 <script>
