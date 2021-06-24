@@ -1,4 +1,5 @@
-
+<?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/header.php";
+?>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
@@ -13,7 +14,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <?php //include $_SERVER["DOCUMENT_ROOT"]."/adminPage/topbar.php";?>
+                <?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/topbar.php";?>
                 <!-- End of Topbar -->
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -63,7 +64,7 @@
             </div>
             <!-- End of Main Content -->
 
-<?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";            ?>            
+<?php //include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";            ?>            
 
 <script>
     $(document).ready(function () {
