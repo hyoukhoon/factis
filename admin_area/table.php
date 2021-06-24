@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Data Tables</title>
-    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"  rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"  rel="stylesheet">
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <style>
       #loader {
         transition: all 0.3s ease-in-out;
@@ -1017,3 +1018,10 @@
     </div>
   </body>
 </html>
+<script>
+
+    $(document).ready( function () {
+        $('#dataTable').DataTable();
+    });
+
+</script>
