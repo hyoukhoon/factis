@@ -1,6 +1,10 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/header.php";
 ?>
 
+
+        <!-- Main Content -->
+        <div id="content">
+
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -535,5 +539,13 @@
 
                 </div>
                 <!-- /.container-fluid -->
+                </div>
+            <!-- End of Main Content -->
 
 <?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";            ?>
+<!-- Page level plugins -->
+<script src="/adminPage/vendor/chart.js/Chart.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="/adminPage/js/demo/chart-area-demo.js"></script>
+<script src="/adminPage/js/demo/chart-pie-demo.js"></script>

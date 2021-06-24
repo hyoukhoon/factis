@@ -1,5 +1,4 @@
-                </div>
-            <!-- End of Main Content -->
+                
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
@@ -52,12 +51,7 @@
     <!-- Custom scripts for all pages-->
     <script src="/adminPage/js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="/adminPage/vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="/adminPage/js/demo/chart-area-demo.js"></script>
-    <script src="/adminPage/js/demo/chart-pie-demo.js"></script>
+    
 
 
 </body>
