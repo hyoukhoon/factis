@@ -75,6 +75,42 @@ while($rs = $result->fetch_object()){
         
     </table>
 
+    <!-- 페이징 -->
+    <div>
+        <div class="pagination-area">
+            <nav aria-label="#">
+                <ul class="pagination">
+                <?php if($f_no!=1){?>
+                    <li class="page-item">
+                        <a class="page-link" href="<?=$_SERVER['PHP_SELF']?>?mode=<?=$mode?>&page=<?=$p_f_no?>&f_no=<?=$p_f_no?>&gubun=<?=$gubun?>&ord=<?=$ord?>&s_key=<?=$s_key?>&sword=<?=$sword?>&site_json=<?=$site_json?>&m2=<?=$m2?>&orderby=<?=$orderby?>"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Prev</a>
+                    </li>
+                <?php }?>
+                <?php for($i=$f_no;$i<=$l_no;$i++){?>
+                    <?php if($i==$page){?>
+                        <li class="page-item active">
+                            <a class="page-link" href="#"><?=$i?> <span class="sr-only">(current)</span></a>
+                        </li>
+                    <?php } else {?>
+                        <li class="page-item"><a class="page-link" href="<?=$PHP_SELF?>?mode=<?=$mode?>&page=<?=$i?>&f_no=<?=$f_no?>&gubun=<?=$gubun?>&ord=<?=$ord?>&s_key=<?=$s_key?>&sword=<?=$sword?>&site_json=<?=$site_json?>&m2=<?=$m2?>&orderby=<?=$orderby?>"><?=$i?></a></li>
+                    <?php }?>
+                <?php }?>
+                <?php if($l_no<$total_page){?>
+                    <li class="page-item">
+                        <a class="page-link" href="<?=$_SERVER['PHP_SELF']?>?mode=<?=$mode?>&page=<?=$n_f_no?>&f_no=<?=$n_f_no?>&gubun=<?=$gubun?>&ord=<?=$ord?>&s_key=<?=$s_key?>&sword=<?=$sword?>&site_json=<?=$site_json?>&m2=<?=$m2?>&orderby=<?=$orderby?>">Next <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </li>
+                <?php }?>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <div style="float:right;">
+        <a href="write.php">
+            <button type="button" class="btn btn-secondary">등록</button>
+        </a>
+    </div>
+
 <script>
 
 $(document).ready(function() {
