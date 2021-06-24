@@ -44,4 +44,4 @@ include $_SERVER['DOCUMENT_ROOT']."/inc/dbcon.php";
       </div>
     </nav>
 
-    <main role="main" class="container">
+    <main role="main" class="container" style="max-width:90%;">
