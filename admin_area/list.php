@@ -595,4 +595,5 @@ while($rs = $result->fetch_object()){
         <button type="button" class="btn btn-secondary">등록</button>
     </a>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 <?php include $_SERVER["DOCUMENT_ROOT"]."/admin_area/footer.php";?>  
