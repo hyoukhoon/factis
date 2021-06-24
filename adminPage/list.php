@@ -130,6 +130,11 @@ while($rs = $result->fetch_object()){
     <?php }?>
 	</ul>
 </div>
+<div style="float:right;">
+        <a href="write.php">
+            <button type="button" class="btn btn-secondary">등록</button>
+        </a>
+    </div>
 
                             </div>
                         </div>
