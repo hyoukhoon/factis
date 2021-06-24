@@ -53,7 +53,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="list.php">
+                <a class="nav-link" href="/adminPage/list.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>리스트</span></a>
             </li>
