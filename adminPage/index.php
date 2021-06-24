@@ -5,7 +5,7 @@
         <!-- Main Content -->
         <div id="content">
 
-                
+        <?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/topbar.php";?>
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
