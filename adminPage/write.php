@@ -51,10 +51,6 @@ if($num){
                                 <div id="summernote"><?echo content_is2($rs->content);?></div>
                                 </div>
                                 <div class="form-group">
-                                <div class="btn btn-default btn-file">
-                                  <i class="fas fa-paperclip"></i> Attachment
-                                  <input type="file" name="attachment">
-                                </div>
                                     <div id="attach_site" class="btn btn-default btn-file">
                                     <div id="attachFiles"></div>
                                       <i class="fas fa-paperclip"></i> 썸네일 : 
