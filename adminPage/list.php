@@ -1,5 +1,7 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/header.php";
 ?>
+<!-- Custom styles for this page -->
+<link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
             <!-- Main Content -->
             <div id="content">
