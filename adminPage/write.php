@@ -14,7 +14,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/topbar.php";?>
+                <?php //include $_SERVER["DOCUMENT_ROOT"]."/adminPage/topbar.php";?>
                 <!-- End of Topbar -->
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
