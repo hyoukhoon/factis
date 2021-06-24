@@ -1,4 +1,11 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/header.php";
+
+$num=$_GET['num'];
+if($num){
+  $result = $mysqli->query("select * from news where num='$num'");
+  $rs = $result->fetch_object();
+}
+
 ?>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -32,16 +39,16 @@
                             <input type="hidden" name="imgUrl" id="imgUrl" value="">
                             <input type="hidden" name="attachFile" id="attachFile" value="">
                                 <div class="form-group">
-                                    제목 : <input type="text" class="form-control" id="subject" placeholder="제목">
+                                    제목 : <input type="text" class="form-control" id="subject" placeholder="제목" value="<?echo stripslashes($rs->subject);?>">
                                 </div>
                                 <div class="form-group">
-                                    유튜브링크 : <textarea class="form-control" id="youtube" rows="3"></textarea>
+                                    유튜브링크 : <textarea class="form-control" id="youtube" rows="3"><?echo stripslashes($rs->url);?></textarea>
                                 </div>
                                 <div class="form-group">
-                                    간략글 : <textarea class="form-control" id="main_text" rows="3"></textarea>
+                                    간략글 : <textarea class="form-control" id="main_text" rows="3"><?echo stripslashes($rs->main_text);?></textarea>
                                 </div>
                                 <div class="form-group">
-                                <div id="summernote"></div>
+                                <div id="summernote"><?echo content_is2($rs->content);?></div>
                                 </div>
                                 <div class="form-group">
                                     <div id="attach_site">
