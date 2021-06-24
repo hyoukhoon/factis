@@ -58,7 +58,11 @@ if($num){
                                         <input type="file" multiple class="form-input" name="afile" id="afile" />
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-dark"  onclick="saveUp();">WRITE</button>
+                                <?php if($num){?>
+                                  <button type="button" class="btn btn-dark"  onclick="editUp();">수정하기</button>
+                                <?php }else{?>
+                                  <button type="button" class="btn btn-dark"  onclick="saveUp();">등록하기</button>
+                                <?php }?>
                             </form>
                         </div>
                     </div>                
@@ -169,7 +173,7 @@ function saveUp(){
 
 				if(data.result==1){
 					alert('등록됐습니다.');
-					location.href='/admin_area/list.php?multi=<?php echo $multi;?>'
+					location.href='/adminPage/list.php?multi=<?php echo $multi;?>'
 				}else if(data.result==-1){
 					alert(data.val);
 					return;
@@ -181,6 +185,56 @@ function saveUp(){
 		});	
 
 }
+
+function editUp(){
+
+var subject=$("#subject").val();
+var youtube=$("#youtube").val();
+var main_text=$("#main_text").val();
+
+var multi=$("#multi").val();
+var imgUrl=$("#imgUrl").val();
+var attachFile=$("#attachFile").val();
+var content=$('#summernote').summernote('code');
+
+if(!subject){
+  alert("제목을 입력하세요");
+  return;
+}
+
+if ($('#summernote').summernote('isEmpty')) {
+  alert('내용을 입력하세요.');
+  return;
+}
+
+
+
+var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile;
+//console.log(params);
+
+$.ajax({
+    type: 'post'
+  , url: 'editUpOk.php'
+  ,data : params
+  , dataType : 'json'
+  , success: function(data) {
+    //console.log(data.result);
+
+    if(data.result==1){
+      alert('수정했습니다.');
+      location.href='/adminPage/view.php?num=<?php echo $num;?>'
+    }else if(data.result==-1){
+      alert(data.val);
+      return;
+    }else{
+      alert('다시 시도해 주십시오.');
+      return;
+    }
+    }
+});	
+
+}
+
 
 $("#afile").change(function(){
 
