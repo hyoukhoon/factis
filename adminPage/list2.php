@@ -84,49 +84,30 @@ while($rs = $result->fetch_object()){
     </tr>
 <?php 
 }?>
-                            <tr>
-                            <td>2.</td>
-                            <td>Clean database</td>
-                            <td>
-                                <div class="progress progress-xs">
-                                <div class="progress-bar bg-warning" style="width: 70%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-warning">70%</span></td>
-                            </tr>
-                            <tr>
-                            <td>3.</td>
-                            <td>Cron job running</td>
-                            <td>
-                                <div class="progress progress-xs progress-striped active">
-                                <div class="progress-bar bg-primary" style="width: 30%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-primary">30%</span></td>
-                            </tr>
-                            <tr>
-                            <td>4.</td>
-                            <td>Fix and squish bugs</td>
-                            <td>
-                                <div class="progress progress-xs progress-striped active">
-                                <div class="progress-bar bg-success" style="width: 90%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-success">90%</span></td>
-                            </tr>
+                            
                         </tbody>
                         </table>
                     </div>
                     <!-- /.card-body -->
-                    <div class="card-footer clearfix">
-                        <ul class="pagination pagination-sm m-0 float-right">
-                        <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                        </ul>
-                    </div>
+    <div class="card-footer clearfix">
+        <ul class="pagination pagination-sm m-0 float-right">
+        <?php if($f_no!=1){?>
+            <li class="page-item">
+            <a class="page-link" href="<?=$_SERVER['PHP_SELF']?>?mode=<?=$mode?>&page=<?=$p_f_no?>&f_no=<?=$p_f_no?>&gubun=<?=$gubun?>&ord=<?=$ord?>&s_key=<?=$s_key?>&sword=<?=$sword?>&site_json=<?=$site_json?>&m2=<?=$m2?>&orderby=<?=$orderby?>">&laquo;</a>
+		</li>
+        <?php }?>
+
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <?php if($l_no<$total_page){?>
+            <li class="page-item">
+                <a class="page-link" href="<?=$_SERVER['PHP_SELF']?>?mode=<?=$mode?>&page=<?=$n_f_no?>&f_no=<?=$n_f_no?>&gubun=<?=$gubun?>&ord=<?=$ord?>&s_key=<?=$s_key?>&sword=<?=$sword?>&site_json=<?=$site_json?>&m2=<?=$m2?>&orderby=<?=$orderby?>">&raquo;</a>
+		    </li>
+        <?php }?>
+
+        </ul>
+    </div>
                 </div>
                 <!-- /.card -->
 
