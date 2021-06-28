@@ -53,8 +53,7 @@ while($rs = $result->fetch_object()){
 						<div class="single_post widgets_small">
 							<div class="post_img">
 								<div class="img_wrap">
-									<img src="<?php echo $thumb[0];?>" alt="">
-
+									<img src="<?php echo $thumb[0];?>" width="200" height="154" alt="">
 								</div>	<span class="tranding">
 									<i class="fas fa-bolt"></i>
 								</span>
