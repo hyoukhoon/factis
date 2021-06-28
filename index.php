@@ -48,7 +48,7 @@ while($rs = $result->fetch_object()){
 					<div class="col-lg-6">
 					<?php
 						foreach($rsc["second_news"] as $sn){
-							$thumb=explode(",",$p->fn1);
+							$thumb=explode(",",$sn->fn1);
 					?>
 						<div class="single_post widgets_small">
 							<div class="post_img">
