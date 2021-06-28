@@ -156,7 +156,7 @@ function saveUp(){
     
     var multi=$("#multi").val();
 		var imgUrl=$("#imgUrl").val();
-    var attachFile=$("#attachFile").val();
+    var attachFile=$("#attachFiles").val();
 		var content=$('#summernote').summernote('code');
 
 		if(!subject){
