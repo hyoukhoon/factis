@@ -172,8 +172,8 @@ function saveUp(){
 
 
 		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile;
-		console.log(params);
-    return;
+		// console.log(params);
+    // return;
 		$.ajax({
 			  type: 'post'
 			, url: 'saveUpOk.php'
@@ -205,7 +205,7 @@ var main_text=$("#main_text").val();
 
 var multi=$("#multi").val();
 var imgUrl=$("#imgUrl").val();
-var attachFile=$("#attachFile").val();
+var attachFile=$("#attachFiles").val();
 var content=$('#summernote').summernote('code');
 
 if(!subject){
