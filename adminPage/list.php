@@ -86,7 +86,7 @@ while($rs = $result->fetch_object()){
 <?php
     foreach($rsc as $p){
         $img="";
-        $img=explode(",",$p->file_list);
+        $img=explode(",",$p->fn1);
 ?>                                                 
         <tr>
             <td><input type="checkbox" name="num[]" id="n_<?php echo $p->num;?>" value="<?php echo $p->num;?>"></td>
