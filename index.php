@@ -16,23 +16,24 @@ while($rs = $result->fetch_object()){
 				<div class="carousel_post2_type3 nav_style1 owl-carousel">
 					<!--CAROUSEL START-->
 				<?php
-					foreach($rsc["trending_news"] as $p){
+					foreach($rsc["trending_news"] as $tn){
 				?>
 					<div class="single_post post_type3">
 						<div class="post_img">
 							<div class="img_wrap">
-								<?php echo $p->url;?>
-							</div>	<span class="tranding">
+								<?php echo $tn->url;?>
+							</div>	
+							<span class="tranding">
 								<i class="fas fa-bolt"></i>
 							</span>
 						</div>
 						<div class="single_post_text">
 							<div class="meta3">	<a href="#">대통령</a>
-								<a href="#"><?php echo date("Y.m.d",strtotime($p->reg_date));?></a>
+								<a href="#"><?php echo date("Y.m.d",strtotime($tn->reg_date));?></a>
 							</div>
-							<h4><a href="post.php"><?php echo $p->subject;?></a></h4>
+							<h4><a href="post.php"><?php echo $tn->subject;?></a></h4>
 							<div class="space-10"></div>
-							<p class="post-p"><?php echo $p->main_text;?></p>
+							<p class="post-p"><?php echo $tn->main_text;?></p>
 						</div>
 					</div>
 				<?php
