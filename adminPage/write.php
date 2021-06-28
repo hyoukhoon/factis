@@ -172,8 +172,8 @@ function saveUp(){
 
 
 		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile;
-		//console.log(params);
-
+		console.log(params);
+    return;
 		$.ajax({
 			  type: 'post'
 			, url: 'saveUpOk.php'
