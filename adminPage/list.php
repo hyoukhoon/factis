@@ -72,7 +72,7 @@ while($rs = $result->fetch_object()){
                                             <th></th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
+                                    <!-- <tfoot>
                                         <tr>
                                         <th>선택</th>
                                             <th>썸네일</th>
@@ -81,7 +81,7 @@ while($rs = $result->fetch_object()){
                                             <th></th>
                                             <th></th>
                                         </tr>
-                                    </tfoot>
+                                    </tfoot> -->
                                     <tbody>
 <?php
     foreach($rsc as $p){
