@@ -58,7 +58,7 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <button type="button" class="btn btn-primary btn-user btn-block" id="submit">
+                                        <button type="button" class="btn btn-primary btn-user btn-block" id="submit" onclick="sendSubmit();">
                                             Login
                                         </button>
                                         <hr>
@@ -103,7 +103,7 @@
 </html>
 
 <script>
-    $("#submit").click(function(){
+    function sendSubmit(){
         var email=$("#email").val();
         var passwd=$("#password").val();
         var params = "email="+email+"&passwd="+passwd;
@@ -124,4 +124,4 @@
                     }
                   }
             });
-    });
+    }
