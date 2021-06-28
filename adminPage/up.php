@@ -37,11 +37,11 @@ if($num){
 
                     <div class="form-group">
                         <label for="subject" style="font-weight:700;">제목</label>
-                        <input type="email" class="form-control" id="subject" placeholder="제목을 입력하세요.">
+                        <input type="email" class="form-control" id="subject" placeholder="제목을 입력하세요." value="<?echo stripslashes($rs->subject);?>">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label style="font-weight:700;">유튜브링크</label>
+                        <textarea class="form-control" rows="3" id="youtube" placeholder="유튜브주소"><?echo stripslashes($rs->url);?></textarea>
                     </div>
 
                     <div class="form-group">
