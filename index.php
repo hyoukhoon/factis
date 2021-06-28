@@ -1,4 +1,4 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
+<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/dbcon.php";
 $result = $mysqli->query("select * from news where ismain=1 order by num desc limit 30");
 while($rs = $result->fetch_object()){
 	$rsc[$rs->place]=$rs;
