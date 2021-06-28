@@ -1,11 +1,12 @@
 <?php session_start();
 include $_SERVER['DOCUMENT_ROOT']."/inc/dbcon.php";
 
-//  if(!$_SESSION['loginValue']['SEMAIL']){
-//  	$data=array("result"=>-1,"val"=>"로그인하십시오."); 
-//  	echo json_encode($data);
-//  	exit;
-//  }
+ if(!$_SESSION['loginValue']['SEMAIL']){
+ 	// $data=array("result"=>-1,"val"=>"로그인하십시오."); 
+ 	// echo json_encode($data);
+     location_is('/adminPage/login.html','','로그인 하십시오.');
+ 	exit;
+ }
 
 ?>
 <!DOCTYPE html>
