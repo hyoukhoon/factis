@@ -48,6 +48,12 @@ if($num){
                         <label style="font-weight:700;">간략글</label>
                         <textarea class="form-control" rows="3" id="main_text" placeholder="메인에 나타나는 간략 설명"><?echo stripslashes($rs->main_text);?></textarea>
                     </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Default checked radio
+                      </label>
+                    </div>
                     <div class="form-group">
                         <input type="radio" id="place" name="place" value="trending_news">Trending News / 
                         <input type="radio" id="place" name="place" value="second_news">Second News / 
