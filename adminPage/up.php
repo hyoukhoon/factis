@@ -36,8 +36,8 @@ if($num){
                     <div class="card-body">
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        <label for="subject" style="font-weight:700;">제목</label>
+                        <input type="email" class="form-control" id="subject" placeholder="제목을 입력하세요.">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
