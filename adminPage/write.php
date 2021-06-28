@@ -33,6 +33,7 @@ if($num){
                 <!-- /.card-header -->
                 <!-- form start -->
                 <form>
+                    <input type="hidden" id="imgUrl">
                     <div class="card-body">
 
                     <div class="form-group">
