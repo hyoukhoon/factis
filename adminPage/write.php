@@ -33,7 +33,7 @@ if($num){
                 <!-- /.card-header -->
                 <!-- form start -->
                 <form>
-                    <input type="hidden" id="imgUrl">
+                    <input type="hidden" id="imgUrl" value="<?php echo $rs->file_list;?>">
                     <div class="card-body">
 
                     <div class="form-group">
@@ -55,7 +55,7 @@ if($num){
                     
                     <div class="form-group">
                         <label for="exampleInputFile">썸네일</label>
-                        <div id="attachFiles"></div>
+                        <div id="attachFiles"><?php echo $rs->fn1;?></div>
                         <div class="input-group">
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" name="afile" id="afile">
