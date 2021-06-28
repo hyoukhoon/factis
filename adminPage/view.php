@@ -40,10 +40,11 @@ $rs = $result->fetch_object();
                     <div class="card-body">
                         
                             <?echo content_is2($rs->content);?>
+
                             <?php
                                 if($rs->fn1){
                             ?>
-                            <br>
+                            <div>
                             첨부파일 : 
                             <?php
                                 $k=1;
@@ -57,6 +58,7 @@ $rs = $result->fetch_object();
                             <?php
                                 $k++;
                                 }
+                                echo "</div>";
                             }
                             ?>
 
