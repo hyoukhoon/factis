@@ -45,7 +45,7 @@ if($num){
                     </div>
                     <div class="form-group">
                         <label style="font-weight:700;">간략글</label>
-                        <textarea class="form-control" rows="3" id="main_text" placeholder="유튜브주소"><?echo stripslashes($rs->main_text);?></textarea>
+                        <textarea class="form-control" rows="3" id="main_text" placeholder="메인에 나타나는 간략 설명"><?echo stripslashes($rs->main_text);?></textarea>
                     </div>
 
                     <div class="form-group">

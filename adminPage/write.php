@@ -7,19 +7,18 @@ if($num){
 }
 
 ?>
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
             <!-- Main Content -->
             <div id="content">
-
                 <!-- Topbar -->
                 <?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/topbar.php";?>
                 <!-- End of Topbar -->
@@ -27,56 +26,68 @@ if($num){
                 <div class="container-fluid">
                 <!-- 시작 -->
 
-                <p>
-<h3>뉴스 등록및수정</h3>
-</p>
-    <div class="col-12 col-md-12 item">
-                        <div class="contact-form wow fadeInUpBig" data-wow-delay="0.6s">
-                            
-                            <!-- Contact Form -->
-                            <form action="#" method="post">
-                            
-                            <input type="hidden" name="imgUrl" id="imgUrl" value="">
-                            <input type="hidden" name="attachFile" id="attachFile" value="">
-                                <div class="form-group">
-                                    제목 : <input type="text" class="form-control" id="subject" placeholder="제목" value="<?echo stripslashes($rs->subject);?>">
-                                </div>
-                                <div class="form-group">
-                                    유튜브링크 : <textarea class="form-control" id="youtube" rows="3"><?echo stripslashes($rs->url);?></textarea>
-                                </div>
-                                <div class="form-group">
-                                    간략글 : <textarea class="form-control" id="main_text" rows="3"><?echo stripslashes($rs->main_text);?></textarea>
-                                </div>
-                                <div class="form-group">
-                                <div id="summernote"><?echo content_is2($rs->content);?></div>
-                                </div>
-                                <div class="form-group">
-                                    <div id="attach_site">
-                                      썸네일 : 
-                                        <div id="attachFiles">
-                                        </div>
-                                        <input type="file" multiple class="form-input" name="afile" id="afile" />
-                                    </div>
-                                </div>
-                                <?php if($num){?>
-                                  <button type="button" class="btn btn-dark"  onclick="editUp();">수정하기</button>
-                                <?php }else{?>
-                                  <button type="button" class="btn btn-dark"  onclick="saveUp();">등록하기</button>
-                                <?php }?>
-                            </form>
+                <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">글쓰기및 수정</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form>
+                    <div class="card-body">
+
+                    <div class="form-group">
+                        <label for="subject" style="font-weight:700;">제목</label>
+                        <input type="email" class="form-control" id="subject" placeholder="제목을 입력하세요." value="<?echo stripslashes($rs->subject);?>">
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight:700;">유튜브링크</label>
+                        <textarea class="form-control" rows="3" id="youtube" placeholder="유튜브주소"><?echo stripslashes($rs->url);?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight:700;">간략글</label>
+                        <textarea class="form-control" rows="3" id="main_text" placeholder="메인에 나타나는 간략 설명"><?echo stripslashes($rs->main_text);?></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <div id="summernote"><?echo content_is2($rs->content);?></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="exampleInputFile">썸네일</label>
+                        <div id="attachFiles"></div>
+                        <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="afile" id="afile">
+                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                         </div>
-                    </div>                
+                        <!-- <div class="input-group-append">
+                            <span class="input-group-text">Upload</span>
+                        </div> -->
+                        </div>
+                    </div>
+                    <!-- <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <?php if($num){?>
+                            <button type="button" class="btn btn-dark"  onclick="editUp();">수정하기</button>
+                        <?php }else{?>
+                            <button type="button" class="btn btn-dark"  onclick="saveUp();">등록하기</button>
+                        <?php }?>
+                    </div>
+                </form>
+                </div>
 
                     
                 <!-- 끝 -->
                 </div>
                 <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
-<br><br><br><br><br>
-<?php //include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";            ?>            
-
 <script>
     $(document).ready(function () {
     var $summernote = $('#summernote').summernote({
@@ -277,3 +288,6 @@ function attachFile(file) {
 }
 
 </script>
+
+
+<?php //include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";            ?>            
