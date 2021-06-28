@@ -16,6 +16,7 @@ while($rs = $result->fetch_object()){
 				<div class="carousel_post2_type3 nav_style1 owl-carousel">
 					<!--CAROUSEL START-->
 				<?php
+					print_r($rsc["trending_news"]);
 					foreach($rsc["trending_news"] as $tn){
 				?>
 					<div class="single_post post_type3">
