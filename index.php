@@ -52,7 +52,9 @@ while($rs = $result->fetch_object()){
 						<div class="single_post widgets_small">
 							<div class="post_img">
 								<div class="img_wrap">
-									<img src="assets/img/trending/transm4.jpg" alt="">
+									<!-- <img src="assets/img/trending/transm4.jpg" alt=""> -->
+									<iframe width="100" height="77" src="<?php echo $sn->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>	
 								</div>	<span class="tranding">
 									<i class="fas fa-bolt"></i>
 								</span>
