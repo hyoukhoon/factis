@@ -43,32 +43,41 @@ if($num){
                         <label style="font-weight:700;">유튜브링크</label>
                         <textarea class="form-control" rows="3" id="youtube" placeholder="유튜브주소"><?echo stripslashes($rs->url);?></textarea>
                     </div>
+                    <div class="form-group">
+                        <label style="font-weight:700;">간략글</label>
+                        <textarea class="form-control" rows="3" id="main_text" placeholder="유튜브주소"><?echo stripslashes($rs->main_text);?></textarea>
+                    </div>
 
                     <div class="form-group">
                         <div id="summernote"><?echo content_is2($rs->content);?></div>
                     </div>
                     
                     <div class="form-group">
-                        <label for="exampleInputFile">File input</label>
+                        <label for="exampleInputFile">썸네일</label>
+                        <div id="attachFiles"></div>
                         <div class="input-group">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                            <input type="file" class="custom-file-input" name="afile" id="afile">
                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                         </div>
-                        <div class="input-group-append">
+                        <!-- <div class="input-group-append">
                             <span class="input-group-text">Upload</span>
-                        </div>
+                        </div> -->
                         </div>
                     </div>
-                    <div class="form-check">
+                    <!-- <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
+                    </div> -->
                     </div>
                     <!-- /.card-body -->
 
                     <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                        <?php if($num){?>
+                            <button type="button" class="btn btn-dark"  onclick="editUp();">수정하기</button>
+                        <?php }else{?>
+                            <button type="button" class="btn btn-dark"  onclick="saveUp();">등록하기</button>
+                        <?php }?>
                     </div>
                 </form>
                 </div>
