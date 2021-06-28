@@ -46,6 +46,9 @@ while($rs = $result->fetch_object()){
 				<div class="space-30"></div>
 				<div class="row">
 					<div class="col-lg-6">
+					<?php
+						foreach($rsc["second_news"] as $sn){
+					?>
 						<div class="single_post widgets_small">
 							<div class="post_img">
 								<div class="img_wrap">
@@ -56,47 +59,17 @@ while($rs = $result->fetch_object()){
 							</div>
 							<div class="single_post_text">
 								<div class="meta2">	<a href="#">TECHNOLOGY</a>
-									<a href="#">March 26, 2020</a>
+									<a href="#"><?php echo date("Y.m.d",strtotime($sn->reg_date));?></a>
 								</div>
-								<h4><a href="post1.html">Nancy Zhang a Chinese busy woman and Dhaka</a></h4>
+								<h4><a href="post1.html"><?php echo $sn->subject;?></a></h4>
 							</div>
 						</div>
 						<div class="space-15"></div>
 						<div class="border_black"></div>
 						<div class="space-15"></div>
-						<div class="single_post widgets_small">
-							<div class="post_img">
-								<div class="img_wrap">
-									<img src="assets/img/trending/transm5.jpg" alt="">
-								</div>	<span class="tranding">
-									<i class="fas fa-bolt"></i>
-								</span>
-							</div>
-							<div class="single_post_text">
-								<div class="meta2">	<a href="#">TECHNOLOGY</a>
-									<a href="#">March 26, 2020</a>
-								</div>
-								<h4><a href="post1.html">U.S. Response subash says he will label regions by risk of…</a></h4>
-							</div>
-						</div>
-						<div class="space-15"></div>
-						<div class="border_black"></div>
-						<div class="space-15"></div>
-						<div class="single_post widgets_small">
-							<div class="post_img">
-								<div class="img_wrap">
-									<img src="assets/img/trending/transm6.jpg" alt="">
-								</div>	<span class="tranding">
-									<i class="fas fa-bolt"></i>
-								</span>
-							</div>
-							<div class="single_post_text">
-								<div class="meta2">	<a href="#">TECHNOLOGY</a>
-									<a href="#">March 26, 2020</a>
-								</div>
-								<h4><a href="post1.html">Venezuela elan govt and opposit the property collect</a></h4>
-							</div>
-						</div>
+					<?php }?>
+						
+						
 					</div>
 					<div class="col-lg-6">
 						<div class="single_post widgets_small">
