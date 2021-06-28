@@ -436,7 +436,7 @@ while($rs = $result->fetch_object()){
 							</div>
 						</div>
 						<?php }?>
-						<!-- <div class="single_post post_type6 post_type7">
+						<div class="single_post post_type6 post_type7">
 							<div class="post_img gradient1">
 								<img src="assets/img/feature/feature3.jpg" alt="">
 							</div>
@@ -479,7 +479,7 @@ while($rs = $result->fetch_object()){
 								</div>
 								<h4><a href="post1.html">Best garden wing supplies for the horticu ltural</a></h4>
 							</div>
-						</div> -->
+						</div>
 					</div>
 					<!--CAROUSEL END-->
 				</div>
