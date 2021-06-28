@@ -172,6 +172,8 @@ function saveUp(){
     var attachFile=$("#attachFiles").val();
 		var content=$('#summernote').summernote('code');
 
+    var place =$('input:radio[name="place"]:checked').val();
+
 		if(!subject){
 			alert("제목을 입력하세요");
 			return;
@@ -185,8 +187,8 @@ function saveUp(){
 
 
 		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile;
-		// console.log(params);
-    // return;
+		console.log(params);
+    return;
 		$.ajax({
 			  type: 'post'
 			, url: 'saveUpOk.php'
