@@ -48,11 +48,13 @@ while($rs = $result->fetch_object()){
 					<div class="col-lg-6">
 					<?php
 						foreach($rsc["second_news"] as $sn){
+							$thumb=explode(",",$p->fn1);
 					?>
 						<div class="single_post widgets_small">
 							<div class="post_img">
 								<div class="img_wrap">
-									<img src="assets/img/trending/transm4.jpg" alt="">
+									<img src="<?php echo $thumb[0];?>" alt="">
+
 								</div>	<span class="tranding">
 									<i class="fas fa-bolt"></i>
 								</span>
