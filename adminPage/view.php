@@ -3,6 +3,11 @@ $num=$_GET['num'];
 $result = $mysqli->query("select * from news where num='$num'");
 $rs = $result->fetch_object();
 ?>
+<style>
+    .childImg{
+        max-width:90%;
+    }
+</style>
             <!-- Main Content -->
             <div id="content">
                 <!-- Topbar -->
