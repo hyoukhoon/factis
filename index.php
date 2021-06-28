@@ -1,7 +1,7 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
 $result = $mysqli->query("select * from news where ismain=1 order by num desc limit 30");
 while($rs = $result->fetch_object()){
-	$rsc[$rs->place]=$rs;
+	$rsc[$rs->place][]=$rs;
 }
 // echo "<pre>";
 // print_r($rsc);
@@ -16,7 +16,6 @@ while($rs = $result->fetch_object()){
 				<div class="carousel_post2_type3 nav_style1 owl-carousel">
 					<!--CAROUSEL START-->
 				<?php
-					print_r($rsc["trending_news"]);
 					foreach($rsc["trending_news"] as $tn){
 				?>
 					<div class="single_post post_type3">
