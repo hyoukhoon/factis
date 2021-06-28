@@ -1,12 +1,12 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/dbcon.php";
+<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
 $result = $mysqli->query("select * from news where ismain=1 order by num desc limit 30");
 while($rs = $result->fetch_object()){
 	$rsc[$rs->place]=$rs;
 }
-echo "<pre>";
-//print_r($rsc);
-print_r($rsc["trending_news"]);
-exit;
+// echo "<pre>";
+// print_r($rsc);
+// print_r($rsc["trending_news"]);
+// exit;
 ?>
 <!--::::: TRANDING CAROUSEL AREA START :::::::-->
 	<div class="container">
@@ -16,7 +16,7 @@ exit;
 				<div class="carousel_post2_type3 nav_style1 owl-carousel">
 					<!--CAROUSEL START-->
 				<?php
-					foreach($rsc as $p){
+					foreach($rsc["trending_news"] as $p){
 				?>
 					<div class="single_post post_type3">
 						<div class="post_img">
