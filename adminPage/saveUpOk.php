@@ -11,9 +11,9 @@ $email=$_SESSION['loginValue']['SEMAIL'];
 $name=$_SESSION['loginValue']['SUNAME'];
 $multi=$_GET["multi"]??$_POST["multi"];
 
-	$subject=removeHackTag($_POST['subject']);
+	$subject=addslashes(removeHackTag($_POST['subject']));
 	$youtube=$_POST['youtube'];
-    $main_text=removeHackTag($_POST['main_text']);
+    $main_text=addslashes(removeHackTag($_POST['main_text']));
 	$imgUrl=$_POST['imgUrl'];
     $attachFile=$_POST['attachFile'];
 	$content=$_POST['content'];
