@@ -19,7 +19,7 @@ $rs = $result->fetch_object();
                         <div class="user-block">
                         
                         <h3 class="widget-user-username"><?echo stripslashes($rs->subject);?></h3>
-                        <span class="username"><?echo stripslashes($rs->main_text);?></span>
+                        <p class="username"><?echo stripslashes($rs->main_text);?></p>
                         <span class="description"><?php echo date("Y.m.d H:i:s",strtotime($rs->reg_date));?></span>
                         </div>
                         <!-- /.user-block -->
