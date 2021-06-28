@@ -275,11 +275,11 @@ function attachFile(file) {
           }else{
             var img="<img src='"+$.trim(data)+"' width='50'><br>";
             $("#attachFiles").append(img);
-            var attachFile=$("#attachFile").val();
+            var attachFile=$("#attachFiles").val();
             if(attachFile){
               attachFile=attachFile+",";
             }
-            $("#attachFile").val(attachFile+$.trim(data));
+            $("#attachFiles").val(attachFile+$.trim(data));
 
           }
         }
