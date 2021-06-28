@@ -61,7 +61,7 @@ while($rs = $result->fetch_object()){
 								<div class="meta2">	<a href="#">TECHNOLOGY</a>
 									<a href="#"><?php echo date("Y.m.d",strtotime($sn->reg_date));?></a>
 								</div>
-								<h4><a href="post1.html"><?php echo mb_substr($sn->subject, 0, 10, 'utf-8');?></a></h4>
+								<h4><a href="post1.html"><?php echo mb_substr($sn->subject, 0, 20, 'utf-8');?></a></h4>
 							</div>
 						</div>
 						<div class="space-15"></div>
@@ -417,6 +417,9 @@ while($rs = $result->fetch_object()){
 				<div class="col-12">
 					<div class="feature_carousel owl-carousel nav_style1">
 						<!--CAROUSEL START-->
+						<?php
+							foreach($rsc["feature_news"] as $tn){
+						?>						
 						<div class="single_post post_type6 post_type7">
 							<div class="post_img gradient1">
 								<a href="#">
@@ -428,11 +431,12 @@ while($rs = $result->fetch_object()){
 									<a href="#">March 26, 2020</a>
 								</div>
 								<h4>
-									<a href="post1.html">Best garden wing supplies for the horticu ltural</a>
+									<a href="post1.html"><?php echo mb_substr($sn->subject, 0, 20, 'utf-8');?></a>
 								</h4>
 							</div>
 						</div>
-						<div class="single_post post_type6 post_type7">
+						<?php }?>
+						<!-- <div class="single_post post_type6 post_type7">
 							<div class="post_img gradient1">
 								<img src="assets/img/feature/feature3.jpg" alt="">
 							</div>
@@ -475,7 +479,7 @@ while($rs = $result->fetch_object()){
 								</div>
 								<h4><a href="post1.html">Best garden wing supplies for the horticu ltural</a></h4>
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<!--CAROUSEL END-->
 				</div>
