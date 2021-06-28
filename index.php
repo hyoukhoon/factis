@@ -1,8 +1,11 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
-$result = $mysqli->query("select * from news order by num desc limit 3");
+$result = $mysqli->query("select * from news where ismain=1 order by num desc limit 30");
 while($rs = $result->fetch_object()){
-	$rsc[]=$rs;
+	$rsc[$rs->place]=$rs;
 }
+echo "<pre>";
+print_r($rsc);
+exit;
 ?>
 <!--::::: TRANDING CAROUSEL AREA START :::::::-->
 	<div class="container">
