@@ -418,7 +418,7 @@ while($rs = $result->fetch_object()){
 					<div class="feature_carousel owl-carousel nav_style1">
 						<!--CAROUSEL START-->
 						<?php
-							foreach($rsc["feature_news"] as $tn){
+							foreach($rsc["feature_news"] as $fn){
 						?>						
 						<div class="single_post post_type6 post_type7">
 							<div class="post_img gradient1">
@@ -431,7 +431,7 @@ while($rs = $result->fetch_object()){
 									<a href="#">March 26, 2020</a>
 								</div>
 								<h4>
-									<a href="post1.html"><?php echo mb_substr($sn->subject, 0, 20, 'utf-8');?></a>
+									<a href="post1.html"><?php echo mb_substr($fn->subject, 0, 20, 'utf-8');?></a>
 								</h4>
 							</div>
 						</div>
