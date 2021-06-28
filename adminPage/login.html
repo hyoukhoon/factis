@@ -107,6 +107,7 @@
         var email=$("#email").val();
         var passwd=$("#password").val();
         var params = "email="+email+"&passwd="+passwd;
+        console.log("email=>"+email);
         $.ajax({
                   type: 'post'
                 , url: 'loginOk.php'
