@@ -28,7 +28,7 @@ if($num){
 
                 <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Quick Example</h3>
+                    <h3 class="card-title">글쓰기및 수정</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -79,7 +79,7 @@ if($num){
                 <!-- /.container-fluid -->
             </div>
             <!-- End of Main Content -->
-            <script>
+<script>
     $(document).ready(function () {
     var $summernote = $('#summernote').summernote({
 		codeviewFilter: false,
@@ -281,4 +281,4 @@ function attachFile(file) {
 </script>
 
 
-<?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";            ?>            
+<?php //include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";            ?>            
