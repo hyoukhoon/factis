@@ -55,7 +55,14 @@ if($num){
                     
                     <div class="form-group">
                         <label for="exampleInputFile">썸네일</label>
-                        <div id="attachFiles"><?php echo $rs->fn1;?></div>
+                        <div id="attachFiles">
+                          <?php
+                            $fn=explode(",",$rs->fn1);
+                            foreach($fn as $f){
+                          ?>
+                            <img src="<?php echo $f;?>" width="50"><br>
+                          <?php }?>
+                        </div>
                         <div class="input-group">
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" name="afile" id="afile">
