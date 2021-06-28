@@ -20,7 +20,7 @@ $rs = $result->fetch_object();
                         
                         <h3 class="widget-user-username"><?echo stripslashes($rs->subject);?></h3>
                         <span class="username"><?echo stripslashes($rs->main_text);?></span>
-                        <span class="description"><?php echo date("Y.m.d",strtotime($p->reg_date));?></span>
+                        <span class="description"><?php echo date("Y.m.d H:i:s",strtotime($rs->reg_date));?></span>
                         </div>
                         <!-- /.user-block -->
                         <!-- <div class="card-tools">
