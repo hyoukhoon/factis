@@ -1,4 +1,7 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/header.php";
+$num=$_GET['num'];
+$result = $mysqli->query("select * from news where num='$num'");
+$rs = $result->fetch_object();
 ?>
             <!-- Main Content -->
             <div id="content">
@@ -9,17 +12,18 @@
                 <div class="container-fluid">
                 <!-- 시작 -->
 
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <!-- Box Comment -->
                     <div class="card card-widget">
                     <div class="card-header">
                         <div class="user-block">
-                        <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Image">
-                        <span class="username"><a href="#">Jonathan Burke Jr.</a></span>
-                        <span class="description">Shared publicly - 7:30 PM Today</span>
+                        
+                        <h3 class="widget-user-username"><?echo stripslashes($rs->subject);?></h3>
+                        <span class="username"><?echo stripslashes($rs->main_text);?></span>
+                        <span class="description"><?php echo date("Y.m.d",strtotime($p->reg_date));?></span>
                         </div>
                         <!-- /.user-block -->
-                        <div class="card-tools">
+                        <!-- <div class="card-tools">
                         <button type="button" class="btn btn-tool" title="Mark as read">
                             <i class="far fa-circle"></i>
                         </button>
@@ -29,14 +33,33 @@
                         <button type="button" class="btn btn-tool" data-card-widget="remove">
                             <i class="fas fa-times"></i>
                         </button>
-                        </div>
+                        </div> -->
                         <!-- /.card-tools -->
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <img class="img-fluid pad" src="../dist/img/photo2.png" alt="Photo">
+                        
+                            <?echo content_is2($rs->content);?>
+                            <?php
+                                if($rs->fn1){
+                            ?>
+                            <br>
+                            첨부파일 : 
+                            <?php
+                                $k=1;
+                                $fn=explode(",",$rs->fn1);
+                                foreach($fn as $f){
+                                    
+                            ?>
+                            <a href="<?=$f?>" target="_blank">
+                                    첨부파일<?php echo $k;?>
+                        </a>
+                            <?php
+                                $k++;
+                                }
+                            }
+                            ?>
 
-                        <p>I took this photo this morning. What do you guys think?</p>
                         <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i> Share</button>
                         <button type="button" class="btn btn-default btn-sm"><i class="far fa-thumbs-up"></i> Like</button>
                         <span class="float-right text-muted">127 likes - 3 comments</span>
