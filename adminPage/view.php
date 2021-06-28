@@ -46,19 +46,29 @@ $rs = $result->fetch_object();
                             ?>
                             <div>
                             첨부파일 : 
+                            <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
                             <?php
                                 $k=1;
                                 $fn=explode(",",$rs->fn1);
                                 foreach($fn as $f){
                                     
                             ?>
-                            <a href="<?=$f?>" target="_blank">
-                                    첨부파일<?php echo $k;?>
-                        </a>
+
+                            <li>
+                                <span class="mailbox-attachment-icon has-img"><img src="<?php echo $f;?>" alt="Attachment"></span>
+
+                                <div class="mailbox-attachment-info">
+                                <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"><?php echo $f;?></i></a>
+                                    <span class="mailbox-attachment-size clearfix mt-1">
+                                        <span>2.67 MB</span>
+                                        <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
+                                    </span>
+                                </div>
+                            </li>
                             <?php
                                 $k++;
                                 }
-                                echo "</div>";
+                                echo "</ul></div>";
                             }
                             ?>
 
