@@ -61,7 +61,7 @@ while($rs = $result->fetch_object()){
 								<div class="meta2">	<a href="#">TECHNOLOGY</a>
 									<a href="#"><?php echo date("Y.m.d",strtotime($sn->reg_date));?></a>
 								</div>
-								<h4><a href="post1.html"><?php echo mb_substr($sn->subject, 0, 10, SERVER_CHARSET);?></a></h4>
+								<h4><a href="post1.html"><?php echo mb_substr($sn->subject, 0, 10, 'utf-8');?></a></h4>
 							</div>
 						</div>
 						<div class="space-15"></div>
