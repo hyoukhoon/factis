@@ -85,7 +85,6 @@ while($rs = $result->fetch_object()){
                                     <tbody>
 <?php
     foreach($rsc as $p){
-        echo "file->".$p->file_list;
         $img="";
         $img=explode(",",$p->file_list);
 ?>                                                 
