@@ -53,7 +53,6 @@ while($rs = $result->fetch_object()){
 							<div class="post_img">
 								<div class="img_wrap">
 									<img src="assets/img/trending/transm4.jpg" alt="">
-								</div>	
 								</div>	<span class="tranding">
 									<i class="fas fa-bolt"></i>
 								</span>
@@ -424,8 +423,7 @@ while($rs = $result->fetch_object()){
 						<div class="single_post post_type6 post_type7">
 							<div class="post_img gradient1">
 								<a href="#">
-									<!-- <img src="assets/img/feature/feature2.jpg" alt=""> -->
-									<iframe width="255" height="320" src="<?php echo $fn->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<img src="assets/img/feature/feature2.jpg" alt="">
 								</a>
 							</div>
 							<div class="single_post_text">
