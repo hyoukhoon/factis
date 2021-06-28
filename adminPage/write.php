@@ -186,7 +186,7 @@ function saveUp(){
 
 
 
-		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile;
+		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile+"&place="+place;
 		console.log(params);
     return;
 		$.ajax({
