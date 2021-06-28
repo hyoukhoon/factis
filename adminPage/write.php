@@ -49,9 +49,11 @@ if($num){
                         <textarea class="form-control" rows="3" id="main_text" placeholder="메인에 나타나는 간략 설명"><?echo stripslashes($rs->main_text);?></textarea>
                     </div>
                     <div class="form-group">
-                      <input class="custom-control-input custom-control-input-danger" type="radio" id="place" name="place" value="trending_news">Trending News / 
-                      <input class="custom-control-input custom-control-input-danger" type="radio" id="place" name="place" value="second_news">Second News / 
-                      <input class="custom-control-input custom-control-input-danger" type="radio" id="place" name="place" value="feature_news">Feature News
+                      <div class="custom-control custom-radio">
+                        <input class="custom-control-input custom-control-input-danger" type="radio" id="place" name="place" value="trending_news">Trending News / 
+                        <input class="custom-control-input custom-control-input-danger" type="radio" id="place" name="place" value="second_news">Second News / 
+                        <input class="custom-control-input custom-control-input-danger" type="radio" id="place" name="place" value="feature_news">Feature News
+                      </div>
                     </div>
                     <div class="form-group">
                         <div id="summernote"><?echo content_is2($rs->content);?></div>
