@@ -4,7 +4,8 @@ while($rs = $result->fetch_object()){
 	$rsc[$rs->place]=$rs;
 }
 echo "<pre>";
-print_r($rsc);
+//print_r($rsc);
+print_r($rsc["trending_news"]);
 exit;
 ?>
 <!--::::: TRANDING CAROUSEL AREA START :::::::-->
