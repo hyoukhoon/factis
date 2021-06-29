@@ -28,7 +28,7 @@ while($rs = $result->fetch_object()){
 							</span>
 						</div>
 						<div class="single_post_text">
-							<div class="meta3">	<a href="#">대통령</a>
+							<div class="meta3">	<a href="#"><?php echo $tn->cate;?></a>
 								<a href="#"><?php echo date("Y.m.d",strtotime($tn->reg_date));?></a>
 							</div>
 							<h4><a href="post.php"><?php echo $tn->subject;?></a></h4>
@@ -55,7 +55,7 @@ while($rs = $result->fetch_object()){
 								</div>
 							</div>
 							<div class="single_post_text">
-								<div class="meta2">	<a href="#">TECHNOLOGY</a>
+								<div class="meta2">	<a href="#"><?php echo $sn->cate;?></a>
 									<a href="#"><?php echo date("Y.m.d",strtotime($sn->reg_date));?></a>
 								</div>
 								<h4><a href="post1.html"><?php echo mb_substr($sn->subject, 0, 30, 'utf-8');?>...</a></h4>
@@ -80,7 +80,7 @@ while($rs = $result->fetch_object()){
 								</div>
 							</div>
 							<div class="single_post_text">
-								<div class="meta2">	<a href="#">TECHNOLOGY</a>
+								<div class="meta2">	<a href="#"><?php echo $sn->cate;?></a>
 									<a href="#"><?php echo date("Y.m.d",strtotime($sn->reg_date));?></a>
 								</div>
 								<h4><a href="post1.html"><?php echo mb_substr($sn->subject, 0, 30, 'utf-8');?>...</a></h4>
@@ -395,7 +395,7 @@ while($rs = $result->fetch_object()){
 								</a>
 							</div>
 							<div class="single_post_text">
-								<div class="meta5">	<a href="#">TECHNOLOGY</a>
+								<div class="meta5">	<a href="#"><?php echo $fn->cate;?></a>
 									<a href="#">March 26, 2020</a>
 								</div>
 								<h4>
