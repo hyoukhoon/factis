@@ -71,58 +71,48 @@ if($num){
                         <div id="summernote"><?echo content_is2($rs->content);?></div>
                     </div>
 
-                    <div class="card card-primary card-outline">
-
-                    <div class="card-footer bg-white">
-                      <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
-                        <li>
-                          <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
-
-                          <div class="mailbox-attachment-info">
-                            <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> Sep2014-report.pdf</a>
-                                <span class="mailbox-attachment-size clearfix mt-1">
-                                  <span>1,245 KB</span>
-                                  <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
-                                </span>
-                          </div>
-                        </li>
-                        <li>
-                          <span class="mailbox-attachment-icon"><i class="far fa-file-word"></i></span>
-
-                          <div class="mailbox-attachment-info">
-                            <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> App Description.docx</a>
-                                <span class="mailbox-attachment-size clearfix mt-1">
-                                  <span>1,245 KB</span>
-                                  <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
-                                </span>
-                          </div>
-                        </li>
-                        <li>
-                          <span class="mailbox-attachment-icon has-img"><img src="../../dist/img/photo1.png" alt="Attachment"></span>
-
-                          <div class="mailbox-attachment-info">
-                            <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i> photo1.png</a>
-                                <span class="mailbox-attachment-size clearfix mt-1">
-                                  <span>2.67 MB</span>
-                                  <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
-                                </span>
-                          </div>
-                        </li>
-                        <li>
-                          <span class="mailbox-attachment-icon has-img"><img src="../../dist/img/photo2.png" alt="Attachment"></span>
-
-                          <div class="mailbox-attachment-info">
-                            <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i> photo2.png</a>
-                                <span class="mailbox-attachment-size clearfix mt-1">
-                                  <span>1.9 MB</span>
-                                  <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
-                                </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-
-                    </div>
+                    <ul class="users-list clearfix">
+                      <li>
+                        <img src="dist/img/user1-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Alexander Pierce</a>
+                        <span class="users-list-date">Today</span>
+                      </li>
+                      <li>
+                        <img src="dist/img/user8-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Norman</a>
+                        <span class="users-list-date">Yesterday</span>
+                      </li>
+                      <li>
+                        <img src="dist/img/user7-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Jane</a>
+                        <span class="users-list-date">12 Jan</span>
+                      </li>
+                      <li>
+                        <img src="dist/img/user6-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">John</a>
+                        <span class="users-list-date">12 Jan</span>
+                      </li>
+                      <li>
+                        <img src="dist/img/user2-160x160.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Alexander</a>
+                        <span class="users-list-date">13 Jan</span>
+                      </li>
+                      <li>
+                        <img src="dist/img/user5-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Sarah</a>
+                        <span class="users-list-date">14 Jan</span>
+                      </li>
+                      <li>
+                        <img src="dist/img/user4-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Nora</a>
+                        <span class="users-list-date">15 Jan</span>
+                      </li>
+                      <li>
+                        <img src="dist/img/user3-128x128.jpg" alt="User Image">
+                        <a class="users-list-name" href="#">Nadia</a>
+                        <span class="users-list-date">15 Jan</span>
+                      </li>
+                    </ul>
                     
                     <div class="form-group">
 
