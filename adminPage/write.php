@@ -45,7 +45,7 @@ if($num){
                           <?php
                             foreach($category as $ct){
                           ?>
-                            <option value="<?php echo $ct;?>"><?php echo $ct;?></option>
+                            <option value="<?php echo $ct;?>" <?php if($rs->cate==$ct){echo "selected";}?>><?php echo $ct;?></option>
                           <?php }?>
                       </select>
                     </div>
@@ -58,9 +58,12 @@ if($num){
                         <textarea class="form-control" rows="3" id="main_text" placeholder="메인에 나타나는 간략 설명"><?echo stripslashes($rs->main_text);?></textarea>
                     </div>
                     <div class="form-group">
-                        <input type="radio" id="place" name="place" value="trending_news" checked>Trending News <br>
-                        <input type="radio" id="place" name="place" value="second_news">Second News <br>
-                        <input type="radio" id="place" name="place" value="feature_news">Feature News
+                        <label style="font-weight:700;">위치</label>
+                        <select class="custom-select rounded-0" id="place" name="place">
+                            <option value="trending_news" <?php if($rs->place=="trending_news"){echo "selected";}?>>Trending News</option>
+                            <option value="second_news" <?php if($rs->place=="second_news"){echo "selected";}?>>Second News</option>
+                            <option value="feature_news" <?php if($rs->place=="feature_news"){echo "selected";}?>>Feature News</option>
+                      </select>
                     </div>
                     <div class="form-group">
                         <div id="summernote"><?echo content_is2($rs->content);?></div>
@@ -233,6 +236,9 @@ var imgUrl=$("#imgUrl").val();
 var attachFile=$("#attachFiles").val();
 var content=$('#summernote').summernote('code');
 
+var place =$('input:radio[name="place"]:checked').val();
+var cate = $("#cate option:selected").val();
+
 if(!subject){
   alert("제목을 입력하세요");
   return;
@@ -245,7 +251,7 @@ if ($('#summernote').summernote('isEmpty')) {
 
 
 
-var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile+"&num=<?php echo $num;?>";
+var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile+"&num=<?php echo $num;?>&place="+place+"&cate="+cate;
 //console.log(params);
 
 $.ajax({
