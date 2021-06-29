@@ -5,11 +5,12 @@ while($rs = $result->fetch_object()){
 }
 echo "<pre>";
 // print_r($rsc);
-print_r($rsc["trending_news"]);
+$trending_news=$rsc["trending_news"];
+print_r($trending_news);
 echo "<br>-------------------------------------<br>";
-array_slice($rsc["trending_news"], 0, 1);
+array_slice($trending_news, 0, 1);
 echo "<br>-------------------------------------<br>";
-print_r($rsc["trending_news"]);
+print_r($trending_news);
 exit;
 ?>
 <!--::::: TRANDING CAROUSEL AREA START :::::::-->
