@@ -3,14 +3,14 @@ $result = $mysqli->query("select * from news where ismain=1 order by num desc li
 while($rs = $result->fetch_object()){
 	$rsc[$rs->place][]=$rs;
 }
-echo "<pre>";
+// echo "<pre>";
 // print_r($rsc);
-print_r($rsc["trending_news"]);
-echo "<br>-------------------------------------<br>";
-$trending_news=array_slice($rsc["trending_news"], 0, 1);
-echo "<br>-------------------------------------<br>";
-print_r($trending_news);
-exit;
+// print_r($rsc["trending_news"]);
+// echo "<br>-------------------------------------<br>";
+// $trending_news=array_slice($rsc["trending_news"], 0, 1);
+// echo "<br>-------------------------------------<br>";
+// print_r($trending_news);
+// exit;
 ?>
 <!--::::: TRANDING CAROUSEL AREA START :::::::-->
 	<div class="container">
@@ -20,7 +20,8 @@ exit;
 				<div class="carousel_post2_type3 nav_style1 owl-carousel">
 					<!--CAROUSEL START-->
 				<?php
-					foreach($rsc["trending_news"] as $tn){
+					$trending_news=array_slice($rsc["trending_news"], 0, 3);
+					foreach($trending_news as $tn){
 				?>
 					<div class="single_post post_type3">
 						<div class="post_img">
@@ -49,7 +50,8 @@ exit;
 				<div class="row">
 					<div class="col-lg-6">
 					<?php
-						foreach($rsc["second_news"] as $sn){
+						$second_news=array_slice($rsc["second_news"], 0, 3);
+						foreach($second_news as $sn){
 							$thumb=explode(",",$sn->fn1);
 					?>
 						<div class="single_post widgets_small">
@@ -74,7 +76,8 @@ exit;
 					</div>
 					<div class="col-lg-6">
 					<?php
-						foreach($rsc["second_news"] as $sn){
+						$second_news=array_slice($rsc["second_news"], 0, 3);
+						foreach($second_news as $sn){
 							$thumb=explode(",",$sn->fn1);
 					?>
 						<div class="single_post widgets_small">
@@ -389,7 +392,8 @@ exit;
 					<div class="feature_carousel owl-carousel nav_style1">
 						<!--CAROUSEL START-->
 						<?php
-							foreach($rsc["feature_news"] as $fn){
+							$feature_news=array_slice($rsc["feature_news"], 0, 5);
+							foreach($feature_news as $fn){
 						?>						
 						<div class="single_post post_type6 post_type7">
 							<div class="post_img gradient1">
