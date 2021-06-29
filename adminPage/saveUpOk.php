@@ -19,6 +19,7 @@ $multi=$_GET["multi"]??$_POST["multi"];
 	$content=$_POST['content'];
 	$content=addslashes($content);
     $place=$_POST['place'];
+    $cate=$_POST['cate'];
 
 	$mysqli->autocommit(FALSE);
 
@@ -32,6 +33,7 @@ $multi=$_GET["multi"]??$_POST["multi"];
         `fn1`,
         `content`,
         `place`,
+        `cate`,
         `multi`)
         VALUES
         ('$name',
@@ -43,6 +45,7 @@ $multi=$_GET["multi"]??$_POST["multi"];
         '$attachFile',
         '$content',
         '$place',
+        '$cate',
         '$multi');";
 
         // echo $query;

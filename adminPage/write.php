@@ -42,9 +42,11 @@ if($num){
                     <div class="form-group">
                         <label for="subject" style="font-weight:700;">카테고리</label>
                         <select class="custom-select rounded-0" id="cate">
-                        <option>Value 1</option>
-                        <option>Value 2</option>
-                        <option>Value 3</option>
+                          <?php
+                            foreach($category as $ct){
+                          ?>
+                            <option value="<?php echo $ct;?>"><?php echo $ct;?></option>
+                          <?php }?>
                       </select>
                     </div>
                     <div class="form-group">
@@ -180,6 +182,7 @@ function saveUp(){
 		var content=$('#summernote').summernote('code');
 
     var place =$('input:radio[name="place"]:checked').val();
+    var cate = $("#cate option:selected").val();
 
 		if(!subject){
 			alert("제목을 입력하세요");
@@ -193,7 +196,7 @@ function saveUp(){
 
 
 
-		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile+"&place="+place;
+		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile+"&place="+place+"&cate="+cate;
 		// console.log(params);
     // return;
 		$.ajax({
