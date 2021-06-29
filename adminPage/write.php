@@ -71,6 +71,8 @@ if($num){
                         <div id="summernote"><?echo content_is2($rs->content);?></div>
                     </div>
 
+                    <div class="card card-primary card-outline">
+
                     <div class="card-footer bg-white">
                       <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
                         <li>
@@ -118,6 +120,8 @@ if($num){
                           </div>
                         </li>
                       </ul>
+                    </div>
+
                     </div>
                     
                     <div class="form-group">
