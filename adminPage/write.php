@@ -184,7 +184,7 @@ function saveUp(){
     var attachFile=$("#attachFiles").val();
 		var content=$('#summernote').summernote('code');
 
-    var place =$('input:radio[name="place"]:checked').val();
+    var place =$("#place option:selected").val();
     var cate = $("#cate option:selected").val();
 
 		if(!subject){
@@ -236,7 +236,8 @@ var imgUrl=$("#imgUrl").val();
 var attachFile=$("#attachFiles").val();
 var content=$('#summernote').summernote('code');
 
-var place =$('input:radio[name="place"]:checked').val();
+//var place =$('input:radio[name="place"]:checked').val();
+var place =$("#place option:selected").val();
 var cate = $("#cate option:selected").val();
 
 if(!subject){
