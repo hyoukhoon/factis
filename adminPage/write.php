@@ -35,10 +35,17 @@ if($num){
                 <form>
                     <input type="hidden" id="imgUrl" value="<?php echo $rs->file_list;?>">
                     <div class="card-body">
-
                     <div class="form-group">
                         <label for="subject" style="font-weight:700;">제목</label>
                         <input type="email" class="form-control" id="subject" placeholder="제목을 입력하세요." value="<?echo stripslashes($rs->subject);?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" style="font-weight:700;">카테고리</label>
+                        <select class="custom-select rounded-0" id="cate">
+                        <option>Value 1</option>
+                        <option>Value 2</option>
+                        <option>Value 3</option>
+                      </select>
                     </div>
                     <div class="form-group">
                         <label style="font-weight:700;">유튜브링크</label>
