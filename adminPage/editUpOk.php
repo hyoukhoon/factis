@@ -32,9 +32,9 @@ $multi=$_GET["multi"]??$_POST["multi"];
         url='".$youtube."',
         file_list='".$imgUrl."',
         main_text='".$main_text."',
-        fn1='".$attachFile."v',
-		place='".$place."v',
-		cate='".$cate."v',
+        fn1='".$attachFile."',
+		place='".$place."',
+		cate='".$cate."',
         content='".$content."' 
         where num=".$num;
 
