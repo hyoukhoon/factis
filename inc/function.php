@@ -19,10 +19,9 @@
 
 	$admin_mail="help@autocoin.kr";
 
-	$company="AutoCoin";
+	$company="Factis";
 
-
-
+	$category=array("대통령","사회","경제","정치","스포츠","연예","시사","문화");
 
 function conv_eu($text){
 	return mb_convert_encoding("$text","EUC-KR","UTF-8");
