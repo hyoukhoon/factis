@@ -71,6 +71,7 @@ if($num){
                         <div id="summernote"><?echo content_is2($rs->content);?></div>
                     </div>
 
+                    <div class="card-body p-0">
                     <ul class="users-list clearfix">
                       <li>
                         <img src="dist/img/user1-128x128.jpg" alt="User Image">
@@ -113,6 +114,7 @@ if($num){
                         <span class="users-list-date">15 Jan</span>
                       </li>
                     </ul>
+                    </div>
                     
                     <div class="form-group">
 
