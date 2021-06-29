@@ -76,7 +76,7 @@ while($rs = $result->fetch_object()){
 					</div>
 					<div class="col-lg-6">
 					<?php
-						$second_news=array_slice($rsc["second_news"], 0, 3);
+						$second_news=array_slice($rsc["second_news"], 3, 3);
 						foreach($second_news as $sn){
 							$thumb=explode(",",$sn->fn1);
 					?>
