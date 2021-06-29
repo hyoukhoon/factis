@@ -309,7 +309,7 @@ function attachFile(file) {
             return;
           }else{
             var img="<img src='"+$.trim(data)+"' width='50'><br>";
-            $("#attachFiles").append(img);
+            $("#thumbnails").append(img);
             var attachFile=$("#attachFiles").val();
             if(attachFile){
               attachFile=attachFile+",";
