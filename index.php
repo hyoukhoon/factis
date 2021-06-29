@@ -20,7 +20,7 @@ while($rs = $result->fetch_object()){
 				<div class="carousel_post2_type3 nav_style1 owl-carousel">
 					<!--CAROUSEL START-->
 				<?php
-					$trending_news=array_slice($rsc["trending_news"], 0, 3);
+					$trending_news=array_slice($rsc["trending_news"], 0, 4);
 					foreach($trending_news as $tn){
 				?>
 					<div class="single_post post_type3">
