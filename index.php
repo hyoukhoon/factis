@@ -6,7 +6,9 @@ while($rs = $result->fetch_object()){
 echo "<pre>";
 // print_r($rsc);
 print_r($rsc["trending_news"]);
+echo "<br>-------------------------------------<br>";
 array_slice($rsc["trending_news"], 0, 1);
+echo "<br>-------------------------------------<br>";
 print_r($rsc["trending_news"]);
 exit;
 ?>
