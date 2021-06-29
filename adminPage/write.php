@@ -73,6 +73,11 @@ if($num){
                         <label for="exampleInputFile">썸네일</label>
                         <div id="attachFiles">
                           <?php
+                            echo $rs->fn1;
+                          ?>
+                        </div>
+                        <div id="thumbnails">
+                          <?php
                             $fn=explode(",",$rs->fn1);
                             foreach($fn as $f){
                           ?>
