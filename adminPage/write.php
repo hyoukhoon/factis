@@ -34,6 +34,8 @@ if($num){
                 <!-- form start -->
                 <form>
                     <input type="hidden" id="imgUrl" value="<?php echo $rs->file_list;?>">
+                    <input type="hidden" id="attachFiles" value="<?php echo $rs->fn1;?>">
+                    
                     <div class="card-body">
                     <div class="form-group">
                         <label for="subject" style="font-weight:700;">제목</label>
@@ -71,12 +73,7 @@ if($num){
                     
                     <div class="form-group">
                         <label for="exampleInputFile">썸네일</label>
-                        <div id="attachFiles">
-                          <?php
-                            echo $rs->fn1;
-                          ?>
-                        </div>
-                        <div id="thumbnails">
+                        <div id="tumbnails">
                           <?php
                             $fn=explode(",",$rs->fn1);
                             foreach($fn as $f){
@@ -258,8 +255,8 @@ if ($('#summernote').summernote('isEmpty')) {
 
 
 var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile+"&num=<?php echo $num;?>&place="+place+"&cate="+cate;
-console.log(params);
-return;
+// console.log(params);
+// return;
 
 $.ajax({
     type: 'post'
