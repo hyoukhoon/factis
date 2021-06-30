@@ -376,7 +376,7 @@ function attachFile(file) {
             alert('용량이 너무크거나 이미지 파일이 아닙니다.');
             return;
           }else{
-            var img="<li><span class='mailbox-attachment-icon has-img'><img src='"+$.trim(data)+"' style='height:132px;padding:10px; ' alt='Attachment'></span><div class='mailbox-attachment-info'><a href='#' class='mailbox-attachment-name'><i class='fas fa-camera'></i>첨부파일</a><span class='mailbox-attachment-size clearfix mt-1'><button type='button' class='btn btn-default btn-sm'><i class='far fa-trash-alt'></i></button><a href='#' class='btn btn-default btn-sm float-right'><i class='fas fa-cloud-download-alt'></i></a></span></div></li>";
+            var img="<li><span class='mailbox-attachment-icon has-img'><img src='"+$.trim(data)+"' style='height:132px;padding:10px; ' alt='Attachment'></span><div class='mailbox-attachment-info'><a href='#' class='mailbox-attachment-name'><i class='fas fa-camera'></i>첨부파일</a><span class='mailbox-attachment-size clearfix mt-1'><a href='#' class='btn btn-default btn-sm float-right'><button type='button' class='btn btn-default btn-sm'><i class='far fa-trash-alt'></i></button></a></span></div></li>";
             $("#thumbnails").append(img);
             var attachFile=$("#attachFiles").val();
             if(attachFile){
