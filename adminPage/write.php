@@ -122,6 +122,7 @@ if($num){
                         </li> -->
 
                         <?php
+                        if($rs->fn1){
                           $fn=explode(",",$rs->fn1);
                           foreach($fn as $f){
                         ?>
@@ -139,7 +140,9 @@ if($num){
                           </div>
                         </li>
                             
-                        <?php }?>
+                        <?php }
+                        }
+                        ?>
 
                         
                       </ul>
