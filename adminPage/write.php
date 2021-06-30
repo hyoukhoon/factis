@@ -73,7 +73,7 @@ if($num){
                     </div>
 
                     <div class="card-footer bg-white">
-                      <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
+                      <ul class="mailbox-attachments d-flex align-items-stretch clearfix" id="thumbnails">
 
                         <!-- <li>
                           <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
@@ -127,7 +127,7 @@ if($num){
                     
                     <div class="form-group">
 
-                        <div id="thumbnails">
+                        <div id="thumbnails_">
                           <?php
                             $fn=explode(",",$rs->fn1);
                             foreach($fn as $f){
