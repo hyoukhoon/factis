@@ -75,7 +75,7 @@ if($num){
                     <div class="card-footer bg-white">
                       <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
 
-                        <!-- <li>
+                        <li>
                           <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
 
                           <div class="mailbox-attachment-info">
@@ -96,7 +96,7 @@ if($num){
                                   <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
                                 </span>
                           </div>
-                        </li> -->
+                        </li>
 
                         <!-- <li>
                           <span class="mailbox-attachment-icon has-img"><img src="../../dist/img/photo1.png" alt="Attachment"></span>
