@@ -98,8 +98,8 @@ if($num){
                           </div>
                         </li> -->
 
-                        <!-- <li>
-                          <span class="mailbox-attachment-icon has-img"><img src="../../dist/img/photo1.png" alt="Attachment"></span>
+                        <li>
+                          <span class="mailbox-attachment-icon has-img"><img src="http://news.evvo.kr/news/upImages/cs_202106301047581515.png" width="198" height="132" alt="Attachment"></span>
                           <div class="mailbox-attachment-info">
                             <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i>첨부파일</a>
                                 <span class="mailbox-attachment-size clearfix mt-1">
@@ -107,7 +107,7 @@ if($num){
                                   <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
                                 </span>
                           </div>
-                        </li> -->
+                        </li>
 
                         
                       </ul>
