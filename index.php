@@ -26,8 +26,17 @@ while($rs = $result->fetch_object()){
 					<div class="single_post post_type3">
 						<div class="post_img">
 							<div class="img_wrap">
+							<?php
+							if($tn->url){
+							?>
 							<iframe width="330" height="235" src="<?php echo $tn->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>	
+							<?php
+							}else{
+								$tth=explode(",",$tn->fn1);
+							?>
+								<img src="<?php echo $tth[0];?>" style="width:330px;heigt:235;">
+							<?php }?>
 							<span class="tranding">
 								<i class="fas fa-bolt"></i>
 							</span>
