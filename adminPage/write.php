@@ -99,7 +99,7 @@ if($num){
                         </li>
 
                         <li>
-                          <span class="mailbox-attachment-icon has-img"><img src="http://news.evvo.kr/news/upImages/cs_202106301047581515.png" alt="Attachment"></span>
+                          <span class="mailbox-attachment-icon has-img"><img src="http://news.evvo.kr/news/upImages/cs_202106301047581515.png" style="height:132px;padding:10px; width:198px;" alt="Attachment"></span>
                           <div class="mailbox-attachment-info">
                             <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i>첨부파일</a>
                                 <span class="mailbox-attachment-size clearfix mt-1">
