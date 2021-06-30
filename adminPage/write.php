@@ -132,10 +132,9 @@ if($num){
                           <div class="mailbox-attachment-info">
                             <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i>첨부파일</a>
                                 <span class="mailbox-attachment-size clearfix mt-1">
-                                  <button type="button" class="btn btn-default btn-sm">
+                                    <a href="#" class="float-right"><button type="button" class="btn btn-default btn-sm">
                                     <i class="far fa-trash-alt"></i>
-                                  </button>
-                                  <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
+                                  </button></a>
                                 </span>
                           </div>
                         </li>
