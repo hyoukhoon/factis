@@ -121,21 +121,32 @@ if($num){
                           </div>
                         </li> -->
 
+                        <?php
+                          $fn=explode(",",$rs->fn1);
+                          foreach($fn as $f){
+                        ?>
+
+                        <li>
+                          <span class="mailbox-attachment-icon has-img"><img src="<?php echo $f;?>" style="height:132px;padding:10px; width:198px;" alt="Attachment"></span>
+                          <div class="mailbox-attachment-info">
+                            <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i>첨부파일</a>
+                                <span class="mailbox-attachment-size clearfix mt-1">
+                                  <button type="button" class="btn btn-default btn-sm">
+                                    <i class="far fa-trash-alt"></i>
+                                  </button>
+                                  <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
+                                </span>
+                          </div>
+                        </li>
+                            
+                        <?php }?>
+
                         
                       </ul>
                     </div>
                     
                     <div class="form-group">
 
-                        <div id="thumbnails_">
-                          <?php
-                            $fn=explode(",",$rs->fn1);
-                            foreach($fn as $f){
-                          ?>
-                            <img src="<?php echo $f;?>" width="50">
-                          <?php }?>
-                        </div>
-                        
                         <div class="input-group">
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" name="afile" id="afile">
