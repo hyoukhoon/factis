@@ -75,7 +75,7 @@ if($num){
                     <div class="card-footer bg-white">
                       <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
 
-                        <li>
+                        <!-- <li>
                           <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
 
                           <div class="mailbox-attachment-info">
@@ -96,7 +96,7 @@ if($num){
                                   <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
                                 </span>
                           </div>
-                        </li>
+                        </li> -->
 
                         <!-- <li>
                           <span class="mailbox-attachment-icon has-img"><img src="../../dist/img/photo1.png" alt="Attachment"></span>
@@ -350,7 +350,7 @@ function attachFile(file) {
             alert('용량이 너무크거나 이미지 파일이 아닙니다.');
             return;
           }else{
-            var img="<li><span class='mailbox-attachment-icon has-img'><img src='"+$.trim(data)+"' alt='Attachment'></span><div class='mailbox-attachment-info'><a href='#' class='mailbox-attachment-name'><i class='fas fa-camera'></i>첨부파일</a><span class='mailbox-attachment-size clearfix mt-1'><span>2.67 MB</span><a href='#' class='btn btn-default btn-sm float-right'><i class='fas fa-cloud-download-alt'></i></a></span></div></li>";
+            var img="<li><span class='mailbox-attachment-icon has-img'><img src='"+$.trim(data)+"' width='198' height='132' alt='Attachment'></span><div class='mailbox-attachment-info'><a href='#' class='mailbox-attachment-name'><i class='fas fa-camera'></i>첨부파일</a><span class='mailbox-attachment-size clearfix mt-1'><span>2.67 MB</span><a href='#' class='btn btn-default btn-sm float-right'><i class='fas fa-cloud-download-alt'></i></a></span></div></li>";
             $("#thumbnails").append(img);
             var attachFile=$("#attachFiles").val();
             if(attachFile){
