@@ -102,6 +102,7 @@ while($rs = $result->fetch_object()){
                 "cnt" : '.$p->cnt.',
                 "site_num" : '.$p->num.',
                 "like" : '.$p->good.',
+                "ismain" : '.$p->ismain.',
                 "reg_date" : "'.$p->reg_date.'",
                 "gubun" : '.$gubun.'
             }';
