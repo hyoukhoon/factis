@@ -87,6 +87,8 @@ while($rs = $result->fetch_object()){
     foreach($rsc as $p){
         $img="";
         $img=explode(",",$p->fn1);
+        $gubun=0;
+        $gubun=$p->gubun??0;
 
         //엘라스틱 입력
         $data = '{
@@ -101,7 +103,7 @@ while($rs = $result->fetch_object()){
                 "site_num" : '.$p->num.',
                 "like" : '.$p->good.',
                 "reg_date" : "'.$p->reg_date.'",
-                "gubun" : '.$p->gubun.'
+                "gubun" : '.$gubun.'
             }';
 
             echo $data;
