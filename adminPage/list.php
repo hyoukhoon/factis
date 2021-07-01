@@ -88,7 +88,7 @@ while($rs = $result->fetch_object()){
         $img="";
         $img=explode(",",$p->fn1);
         $gubun=0;
-        $gubun=$p->gubun??0;
+        //$gubun=$p->gubun??0;
 
         //엘라스틱 입력
         $data = '{
