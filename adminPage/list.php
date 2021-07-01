@@ -104,7 +104,7 @@ while($rs = $result->fetch_object()){
                 "gubun" : '.$p->gubun.'
             }';
             
-            $url="localhost:9200/eve/_doc/".$p->num;
+            $url="localhost:9200/news/_doc/".$p->num;
 		    $rs=elaCurl($url,$data);
 ?>                                                 
         <tr>
