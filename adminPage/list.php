@@ -105,10 +105,10 @@ while($rs = $result->fetch_object()){
                 "reg_date" : "'.$p->reg_date.'",
                 "gubun" : '.$gubun.'
             }';
-
+            echo "<pre>";
             echo $data;
             
-            $url="localhost:9200/news/_doc/".$p->num;
+            $url="localhost:9200/news/post/".$p->num;
 		    $rs=elaCurl($url,$data);
 ?>                                                 
         <tr>
