@@ -87,6 +87,25 @@ while($rs = $result->fetch_object()){
     foreach($rsc as $p){
         $img="";
         $img=explode(",",$p->fn1);
+
+        //엘라스틱 입력
+        $data = '{
+                "id" : '.$p->num.',
+                "title" : "'.$p->subject.'",
+                "main_text" : "'.$p->main_text.'",
+                "cate" : "'.$p->cate.'",
+                "place" : "'.$p->place.'",
+                "youtube" : "'.$p->url.'",
+                "thumb" : "'.$img[0].'",
+                "cnt" : '.$p->cnt.',
+                "site_num" : '.$p->num.',
+                "like" : '.$p->good.',
+                "reg_date" : "'.$p->reg_date.'",
+                "gubun" : '.$p->gubun.'
+            }';
+            
+            $url="localhost:9200/eve/_doc/".$p->num;
+		    $rs=elaCurl($url,$data);
 ?>                                                 
         <tr>
             <td><input type="checkbox" name="num[]" id="n_<?php echo $p->num;?>" value="<?php echo $p->num;?>"></td>
@@ -146,7 +165,21 @@ while($rs = $result->fetch_object()){
             </div>
             <!-- End of Main Content -->
 
-<?php include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";            ?>
+<?php 
+
+function elaCurl($url,$data){
+
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_USERPWD, "elastic:soon06051007");
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	return curl_exec($ch);
+}
+
+include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";            ?>
 
 
 
