@@ -27,7 +27,8 @@
 			}
 		},
 		"size": '.$LIMIT.',
-		"from": '.$from.'
+		"from": '.$from.',
+		"sort": '.$ord.'
 	}
 	';
 
