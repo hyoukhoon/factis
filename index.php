@@ -48,8 +48,12 @@
 	$output=json_decode($output);
 	curl_close($ch);  // 리소스 해제
 
+	foreach($output->hits->hits as $rs){
+		$rsc[$rs->place][]=$rs;
+	}
+
 	echo "<pre>";
-	print_r($output);
+	print_r($rsc);
 	exit;
 
 ?>
