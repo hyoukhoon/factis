@@ -23,6 +23,8 @@
 		"sort": '.$ord.'
 	}
 	';
+	echo "<pre>";
+	echo $json;
 
 	$url="http://localhost:9200/news/_search?pretty";
 
