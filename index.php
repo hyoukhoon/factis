@@ -77,9 +77,9 @@
 							<iframe width="330" height="235" src="<?php echo $tn->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<?php
 							}else{
-								$tth=explode(",",$tn->fn1);
+								//$tth=explode(",",$tn->fn1);
 							?>
-								<img src="<?php echo $tth[0];?>" style="width:330px;heigt:235;">
+								<img src="<?php echo $tn->thumb;?>" style="width:330px;heigt:235;">
 							<?php }?>
 							</div>	
 							
