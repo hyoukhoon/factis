@@ -91,7 +91,7 @@
 							<div class="meta3">	<a href="#"><?php echo $tn->cate;?></a>
 								<a href="#"><?php echo date("Y.m.d",strtotime($tn->reg_date));?></a>
 							</div>
-							<h4><a href="post.php"><?php echo $tn->subject;?></a></h4>
+							<h4><a href="post.php"><?php echo $tn->title;?></a></h4>
 							<div class="space-10"></div>
 							<p class="post-p"><?php echo $tn->main_text;?></p>
 						</div>
@@ -119,7 +119,7 @@
 								<div class="meta2">	<a href="#"><?php echo $sn->cate;?></a>
 									<a href="#"><?php echo date("Y.m.d",strtotime($sn->reg_date));?></a>
 								</div>
-								<h4><a href="post1.html"><?php echo mb_substr($sn->subject, 0, 30, 'utf-8');?>...</a></h4>
+								<h4><a href="post1.html"><?php echo mb_substr($sn->title, 0, 30, 'utf-8');?>...</a></h4>
 							</div>
 						</div>
 						<div class="space-15"></div>
@@ -145,7 +145,7 @@
 								<div class="meta2">	<a href="#"><?php echo $sn->cate;?></a>
 									<a href="#"><?php echo date("Y.m.d",strtotime($sn->reg_date));?></a>
 								</div>
-								<h4><a href="post1.html"><?php echo mb_substr($sn->subject, 0, 30, 'utf-8');?>...</a></h4>
+								<h4><a href="post1.html"><?php echo mb_substr($sn->title, 0, 30, 'utf-8');?>...</a></h4>
 							</div>
 						</div>
 						<div class="space-15"></div>
@@ -462,7 +462,7 @@
 									<a href="#">March 26, 2020</a>
 								</div>
 								<h4>
-									<a href="post1.html"><?php echo mb_substr($fn->subject, 0, 30, 'utf-8');?>...</a>
+									<a href="post1.html"><?php echo mb_substr($fn->title, 0, 30, 'utf-8');?>...</a>
 								</h4>
 							</div>
 						</div>
