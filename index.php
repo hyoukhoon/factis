@@ -5,11 +5,22 @@
 // }
 // echo "<pre>";
 
+	$LIMIT=$_GET['LIMIT']?$_GET['LIMIT']:50;
+	$page=$_GET['page']?$_GET['page']-1:0;
+	$start_page=0;
+	$ord='{"reg_date":"desc"}';
+
 	$json='
 	{
-		"size": 50,
-		"from": 0,
-		"sort": {"reg_date":"desc"}
+		"query": {
+				"query_string" : {
+					"fields" : ["title", "url"],
+					"query" : "*문*"
+				}
+		},
+		"size": '.$LIMIT.',
+		"from": '.$start_page.',
+		"sort": '.$ord.'
 	}
 	';
 
