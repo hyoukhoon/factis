@@ -49,7 +49,7 @@
 	curl_close($ch);  // 리소스 해제
 
 	foreach($output->hits->hits as $rs){
-		$rsc[$rs->place][]=$rs;
+		$rsc[$rs->_source->place][]=$rs->_source;
 	}
 
 	echo "<pre>";
