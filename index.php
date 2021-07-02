@@ -27,7 +27,7 @@
 			}
 		},
 		"size": '.$LIMIT.',
-		"form": '.$from.'
+		"from": '.$from.'
 	}
 	';
 
