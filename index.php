@@ -4,26 +4,32 @@
 // 	$rsc[$rs->place][]=$rs;
 // }
 // echo "<pre>";
-
 	$LIMIT=$_GET['LIMIT']?$_GET['LIMIT']:50;
-	$page=$_GET['page']?$_GET['page']-1:0;
-	$start_page=0;
-	$ord='{"reg_date":"desc"}';
-
+	$ord='{"id":"desc"}';
+	//$ord='{"cnt":"desc"}';
+	$from=0;
 	$json='
 	{
-		"query": {
-				"query_string" : {
-					"fields" : ["title", "url"],
-					"query" : "*문*"
-				}
+		"query": { 
+			"bool": { 
+				"filter": [ 
+					{ 
+						"term":  { 
+								"ismain": 1 
+								}
+					},
+					{ 
+						"range": { 
+							"cnt": { "gt": "0" }
+							}
+					} 
+				]
+			}
 		},
 		"size": '.$LIMIT.',
-		"from": '.$start_page.'
+		"form": '.$from.'
 	}
 	';
-	echo "<pre>";
-	echo $json;
 
 	$url="http://localhost:9200/news/_search?pretty";
 
