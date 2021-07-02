@@ -4,29 +4,18 @@
 // 	$rsc[$rs->place][]=$rs;
 // }
 // echo "<pre>";
-	$LIMIT=$_GET['LIMIT']?$_GET['LIMIT']:50;
-	$ord='{"reg_date":"desc"}';
-	//$ord='{"cnt":"desc"}';
+
 	$json='
 	{
-		"query": { 
-			"bool": { 
-				"filter": [ 
-					{ 
-						"term":  { 
-								"ismain": 1 
-								}
-					},
-					{ 
-						"range": { 
-							"cnt": { "gt": "0" }
-							}
-					} 
-				]
+		"query": {
+			"query_string" : {
+				"field" : "ismain",
+				"query" : 1
 			}
 		},
-		"size": '.$LIMIT.',
-		"sort": '.$ord.'
+		"size": 50,
+		"from": 0,
+		"sort": {"reg_date":"desc"}
 	}
 	';
 
