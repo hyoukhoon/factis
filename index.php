@@ -72,9 +72,9 @@
 						<div class="post_img">
 							<div class="img_wrap">
 							<?php
-							if($tn->url){
+							if($tn->youtube){
 							?>
-							<iframe width="330" height="235" src="<?php echo $tn->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe width="330" height="235" src="<?php echo $tn->youtube;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<?php
 							}else{
 								//$tth=explode(",",$tn->fn1);
