@@ -13,7 +13,7 @@
 			"bool": { 
 				"filter": [ 
 					{ 
-						"terms":  { 
+						"term":  { 
 								"ismain": 1 
 								}
 					},
