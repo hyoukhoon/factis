@@ -7,12 +7,6 @@
 
 	$json='
 	{
-		"query": {
-			"query_string" : {
-				"field" : "ismain",
-				"query" : 1
-			}
-		},
 		"size": 50,
 		"from": 0,
 		"sort": {"reg_date":"desc"}
