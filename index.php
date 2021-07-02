@@ -19,8 +19,7 @@
 				}
 		},
 		"size": '.$LIMIT.',
-		"from": '.$start_page.',
-		"sort": '.$ord.'
+		"from": '.$start_page.'
 	}
 	';
 	echo "<pre>";
