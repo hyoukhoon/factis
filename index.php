@@ -107,12 +107,12 @@
 					<?php
 						$second_news=array_slice($rsc["second_news"], 0, 3);
 						foreach($second_news as $sn){
-							$thumb=explode(",",$sn->fn1);
+							//$thumb=explode(",",$sn->fn1);
 					?>
 						<div class="single_post widgets_small">
 							<div class="post_img">
 								<div class="img_wrap">
-									<img src="<?php echo $thumb[0];?>" width="200" height="154" alt="">
+									<img src="<?php echo $sn->thumb;?>" width="200" height="154" alt="">
 								</div>
 							</div>
 							<div class="single_post_text">
@@ -133,12 +133,12 @@
 					<?php
 						$second_news=array_slice($rsc["second_news"], 3, 3);
 						foreach($second_news as $sn){
-							$thumb=explode(",",$sn->fn1);
+							//$thumb=explode(",",$sn->fn1);
 					?>
 						<div class="single_post widgets_small">
 							<div class="post_img">
 								<div class="img_wrap">
-									<img src="<?php echo $thumb[0];?>" width="200" height="154" alt="">
+									<img src="<?php echo $sn->thumb;?>" width="200" height="154" alt="">
 								</div>
 							</div>
 							<div class="single_post_text">
@@ -454,7 +454,7 @@
 							<div class="post_img gradient1">
 								<a href="#">
 									<!-- <img src="assets/img/feature/feature2.jpg" alt=""> -->
-									<iframe width="255" height="310" src="<?php echo $fn->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<iframe width="255" height="310" src="<?php echo $fn->youtube;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								</a>
 							</div>
 							<div class="single_post_text">
