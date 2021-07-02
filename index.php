@@ -1,16 +1,55 @@
 <?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
-$result = $mysqli->query("select * from news where ismain=1 order by num desc limit 30");
-while($rs = $result->fetch_object()){
-	$rsc[$rs->place][]=$rs;
-}
+// $result = $mysqli->query("select * from news where ismain=1 order by num desc limit 30");
+// while($rs = $result->fetch_object()){
+// 	$rsc[$rs->place][]=$rs;
+// }
 // echo "<pre>";
-// print_r($rsc);
-// print_r($rsc["trending_news"]);
-// echo "<br>-------------------------------------<br>";
-// $trending_news=array_slice($rsc["trending_news"], 0, 1);
-// echo "<br>-------------------------------------<br>";
-// print_r($trending_news);
-// exit;
+	$LIMIT=$_GET['LIMIT']?$_GET['LIMIT']:50;
+	$ord='{"reg_date":"desc"}';
+	//$ord='{"cnt":"desc"}';
+	$json='
+	{
+		"query": { 
+			"bool": { 
+				"filter": [ 
+					{ 
+						"terms":  { 
+								"ismain": 1 
+								}
+					},
+					{ 
+						"range": { 
+							"cnt": { "gt": "0" }
+							}
+					} 
+				]
+			}
+		},
+		"size": '.$LIMIT.',
+		"sort": '.$ord.'
+	}
+	';
+
+	$url="http://localhost:9200/news/_search?pretty";
+
+	$ch = curl_init(); // 리소스 초기화
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_USERPWD, "elastic:soon06051007");
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+	'Content-Type: application/json'
+	));
+
+	$output = curl_exec($ch); // 데이터 요청 후 수신
+	$output=json_decode($output);
+	curl_close($ch);  // 리소스 해제
+
+	echo "<pre>";
+	print_r($output);
+	exit;
+
 ?>
 <!--::::: TRANDING CAROUSEL AREA START :::::::-->
 	<div class="container">
