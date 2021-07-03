@@ -57,16 +57,13 @@ while($rs = $result->fetch_object()){
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <select class="custom-select rounded-0" id="place" name="place">
+                            <select class="custom-select rounded-0" id="place" name="place" style="width:auto;">
                                 <option value="" >위치전체</option>
                                 <?php
                                     foreach($placeArray as $key => $pa){
-                                        echo $key."=>".$pa."<br>";
-                                    }
                                 ?>
-                                <option value="trending_news" <?php if($rs->place=="trending_news"){echo "selected";}?>>Trending News</option>
-                                <option value="second_news" <?php if($rs->place=="second_news"){echo "selected";}?>>Second News</option>
-                                <option value="feature_news" <?php if($rs->place=="feature_news"){echo "selected";}?>>Feature News</option>
+                                    <option value="<?php echo $pa;?>" <?php if($rs->place=="trending_news"){echo "selected";}?>><?php echo $key;?></option>
+                                <?php }?>
                             </select>
                             &nbsp;
                             <select class="custom-select rounded-0" style="width:auto;" id="cate">
