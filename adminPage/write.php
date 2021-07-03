@@ -129,22 +129,26 @@ if($num){
                         if($rs->fn1){
                           $fn=explode(",",$rs->fn1);
                           $fn2=explode(",",$rs->fn2);
+                          $k=0;
                           foreach($fn as $f){
+                            $fid=explode(".",$f);
                         ?>
 
-                        <li>
+                        <li id="<?php echo $fid[0];?>">
                           <span class="mailbox-attachment-icon has-img"><img src="<?php echo $f;?>" style="height:132px;padding:10px; width:198px;" alt="Attachment"></span>
                           <div class="mailbox-attachment-info">
-                            <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i>첨부파일</a>
+                            <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i><?php echo $fn2[$k];?></a>
                                 <span class="mailbox-attachment-size clearfix mt-1">
-                                    <a href="javascript:;" class="float-right"><button type="button" class="btn btn-default btn-sm">
+                                    <a href="javascript:;" class="float-right"  onclick="delAttch('<?php echo $fid[0];?>','<?php echo $f;?>','<?php echo $fn2[$kf];?>')"><button type="button" class="btn btn-default btn-sm">
                                     <i class="far fa-trash-alt"></i>
                                   </button></a>
                                 </span>
                           </div>
                         </li>
                             
-                        <?php }
+                        <?php 
+                          $k++;
+                          }
                         }
                         ?>
 
