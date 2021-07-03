@@ -93,7 +93,7 @@ while($rs = $result->fetch_object()){
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th><input type="checkbox" class="chkAll" onclick="chkAll()"></th>
+                                            <th><input type="checkbox" class="chkAll" onclick="chkAll()" id="chkAll"></th>
                                             <th>썸네일</th>
                                             <th>제목</th>
                                             <th>날짜</th>
