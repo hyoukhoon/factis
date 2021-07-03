@@ -19,7 +19,8 @@ if($cate){
 
 $que2="SELECT count(*) FROM news c where 1=1 $where";
 echo $que2."<br>";
-$result2 = $mysqli->query($que2) or die("3:".$mysqli->error);
+exit;
+$result2 = $mysqli->query($que2) or die("22:".$mysqli->error);
 $rs2 = $result2->fetch_array();
 $total=$rs2[0];
 
@@ -42,7 +43,7 @@ $no=$total-($page-1)*$ps;//번호매기기
 $limit_query=" order by num desc limit $start_page, $end_page";
 //$limit_query=" order by num desc ";
 $last_query=$que.$limit_query;
-$result = $mysqli->query($last_query) or die("3:".$mysqli->error);
+$result = $mysqli->query($last_query) or die("45:".$mysqli->error);
 while($rs = $result->fetch_object()){
     $rsc[]=$rs;
 }
