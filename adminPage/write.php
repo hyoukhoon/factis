@@ -128,6 +128,7 @@ if($num){
                         <?php
                         if($rs->fn1){
                           $fn=explode(",",$rs->fn1);
+                          $fn2=explode(",",$rs->fn2);
                           foreach($fn as $f){
                         ?>
 
