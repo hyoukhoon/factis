@@ -399,6 +399,11 @@ function attachFile(file) {
 
 }
 
+function delAttch(fid,fn){
+  alert(fid);
+  alert(fn);
+}
+
 </script>
 
 
