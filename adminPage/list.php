@@ -5,21 +5,21 @@ $multi=$_GET["multi"];
 $place=$_GET["place"];
 $cate=$_GET["cate"];
 
-if($multi){
-    $where = " and multi=".$multi;
-}
+// if($multi){
+//     $where = " and multi=".$multi;
+// }
 
 if($place){
-    $where .= " and place=".$place;
+    $where .= " and place='".$place."'";
 }
 
 if($cate){
-    $where .= " and cate=".$cate;
+    $where .= " and cate='".$cate."'";
 }
 
 $que2="SELECT count(*) FROM news c where 1=1 $where";
-echo $que2."<br>";
-exit;
+// echo $que2."<br>";
+// exit;
 $result2 = $mysqli->query($que2) or die("22:".$mysqli->error);
 $rs2 = $result2->fetch_array();
 $total=$rs2[0];
