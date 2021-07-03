@@ -131,6 +131,7 @@ if($num){
                           $fn2=explode(",",$rs->fn2);
                           $k=0;
                           foreach($fn as $f){
+                            if($f){
                             $fid=explode(".",$f);
                             $fid=str_replace("/news/upImages/","",$fid[0]);
                         ?>
@@ -148,7 +149,8 @@ if($num){
                         </li>
                             
                         <?php 
-                          $k++;
+                            $k++;
+                            }
                           }
                         }
                         ?>
