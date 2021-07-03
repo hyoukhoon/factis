@@ -135,12 +135,12 @@ if($num){
                             $fid=str_replace("/news/upImages/","");
                         ?>
 
-                        <li id="<?php echo $fid[0];?>">
+                        <li id="<?php echo $fid;?>">
                           <span class="mailbox-attachment-icon has-img"><img src="<?php echo $f;?>" style="height:132px;padding:10px; width:198px;" alt="Attachment"></span>
                           <div class="mailbox-attachment-info">
                             <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i><?php echo $fn2[$k];?></a>
                                 <span class="mailbox-attachment-size clearfix mt-1">
-                                    <a href="javascript:;" class="float-right"  onclick="delAttch('<?php echo $fid[0];?>','<?php echo $f;?>','<?php echo $fn2[$kf];?>')"><button type="button" class="btn btn-default btn-sm">
+                                    <a href="javascript:;" class="float-right"  onclick="delAttch('<?php echo $fid;?>','<?php echo $f;?>','<?php echo $fn2[$kf];?>')"><button type="button" class="btn btn-default btn-sm">
                                     <i class="far fa-trash-alt"></i>
                                   </button></a>
                                 </span>
