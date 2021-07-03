@@ -78,7 +78,7 @@ while($rs = $result->fetch_object()){
                                 <?php }?>
                             </select>
                             &nbsp;
-                            <select class="custom-select rounded-0" style="width:auto;" id="cate">
+                            <select class="custom-select rounded-0" style="width:auto;" id="cate" onchange="placeis()">
                             <option value="" >카테고리전체</option>
                             <?php
                                 foreach($category as $ct){
