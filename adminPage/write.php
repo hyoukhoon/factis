@@ -132,6 +132,7 @@ if($num){
                           $k=0;
                           foreach($fn as $f){
                             $fid=explode(".",$f);
+                            $fid=str_replace("/news/upImages/","");
                         ?>
 
                         <li id="<?php echo $fid[0];?>">
