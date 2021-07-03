@@ -379,7 +379,7 @@ function attachFile(file) {
             alert('용량이 너무크거나 이미지 파일이 아닙니다.');
             return;
           }else{
-            var img="<li id='"+$.trim(data.fid)+"'><span class='mailbox-attachment-icon has-img'><img src='"+$.trim(data.fn)+"' style='height:132px;padding:10px; ' alt='Attachment'></span><div class='mailbox-attachment-info'><a href='#' class='mailbox-attachment-name'><i class='fas fa-camera'></i>첨부파일</a><span class='mailbox-attachment-size clearfix mt-1'><a href='javascript:;' onclick='delAttch(\""+$.trim(data.fid)+"\",\""+$.trim(data.fn)+"\",\""+$.trim(data.ofn)+"\")' class='float-right'><button type='button' class='btn btn-default btn-sm'><i class='far fa-trash-alt'></i></button></a></span></div></li>";
+            var img="<li id='"+$.trim(data.fid)+"'><span class='mailbox-attachment-icon has-img'><img src='"+$.trim(data.fn)+"' style='height:132px;padding:10px; ' alt='Attachment'></span><div class='mailbox-attachment-info'><a href='#' class='mailbox-attachment-name'><i class='fas fa-camera'></i>"+$.trim(data.ofn)+"</a><span class='mailbox-attachment-size clearfix mt-1'><a href='javascript:;' onclick='delAttch(\""+$.trim(data.fid)+"\",\""+$.trim(data.fn)+"\",\""+$.trim(data.ofn)+"\")' class='float-right'><button type='button' class='btn btn-default btn-sm'><i class='far fa-trash-alt'></i></button></a></span></div></li>";
             $("#thumbnails").append(img);
             var attachFile=$("#attachFiles").val();
             var fn=$.trim(data.fn)+",";
