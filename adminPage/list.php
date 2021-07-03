@@ -224,12 +224,16 @@ while($rs = $result->fetch_object()){
 
         var checkArray=new Array();
         var cnt=0;
+        var uid="";
         $('input:checkbox[id="chkid"]').each(function() {
-			checkArray[cnt]=this.value;//배열로 저장
+			//checkArray[cnt]=this.value;//배열로 저장
+            uid+=this.value+",";
 			cnt++;
 	    });
 
-        alert(JSON.stringify(checkArray));
+        alert(uid);
+
+        //alert(JSON.stringify(checkArray));
 
     }
 
