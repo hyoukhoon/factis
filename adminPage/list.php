@@ -93,7 +93,7 @@ while($rs = $result->fetch_object()){
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th><input type="checkbox" class="chkAll"></th>
+                                            <th><input type="checkbox" class="chkAll" onclick="chkAll()"></th>
                                             <th>썸네일</th>
                                             <th>제목</th>
                                             <th>날짜</th>
@@ -142,7 +142,7 @@ while($rs = $result->fetch_object()){
 		    $rs=elaCurl($url,$data);
 ?>                                                 
         <tr>
-            <td><input type="checkbox" class="chkbx" name="num[]" id="n_<?php echo $p->num;?>" value="<?php echo $p->num;?>"></td>
+            <td><input type="checkbox" class="chkbx" name="num[]" id="chkid" value="<?php echo $p->num;?>"></td>
             <td>
             <?php 
                     if(!empty($img)){
@@ -208,10 +208,21 @@ while($rs = $result->fetch_object()){
         
     }
 
-    $(".chkAll").click( function() {
-        //$('.chkbx').prop( 'checked', this.checked );
-        alert('haha');
-    });
+    // $(".chkAll").click( function() {
+    //     $('.chkbx').prop( 'checked', this.checked );
+    //     alert('haha');
+    // });
+
+    function chkAll(){
+
+        var cnt=$("input[id='chkAll']:checked").length;
+        if(cnt==1){
+            $("input[id='chkid']:checkbox").prop("checked", "checked");
+        }else{
+            $("input[id='chkid']:checkbox").removeProp("checked");
+        }
+
+    }
 </script>
 
 
