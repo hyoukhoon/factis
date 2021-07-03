@@ -8,6 +8,7 @@ $rs = $result->fetch_object();
         max-width:90%;
     }
 </style>
+<link href="/adminPage/css/adminlte.css" rel="stylesheet">
             <!-- Main Content -->
             <div id="content">
                 <!-- Topbar -->
