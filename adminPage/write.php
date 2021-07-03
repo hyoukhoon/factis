@@ -141,7 +141,7 @@ if($num){
                           <div class="mailbox-attachment-info">
                             <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i><?php echo $fn2[$k];?></a>
                                 <span class="mailbox-attachment-size clearfix mt-1">
-                                    <a href="javascript:;" class="float-right"  onclick="delAttch('<?php echo $fid;?>','<?php echo $f;?>','<?php echo $fn2[$kf];?>')"><button type="button" class="btn btn-default btn-sm">
+                                    <a href="javascript:;" class="float-right"  onclick="delAttch('<?php echo $fid;?>','<?php echo $f;?>','<?php echo $fn2[$k];?>')"><button type="button" class="btn btn-default btn-sm">
                                     <i class="far fa-trash-alt"></i>
                                   </button></a>
                                 </span>
