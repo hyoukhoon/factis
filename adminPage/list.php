@@ -18,6 +18,7 @@ if($cate){
 }
 
 $que2="SELECT count(*) FROM news c where 1=1 $where";
+echo $que2."<br>";
 $result2 = $mysqli->query($que2) or die("3:".$mysqli->error);
 $rs2 = $result2->fetch_array();
 $total=$rs2[0];
