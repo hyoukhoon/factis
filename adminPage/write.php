@@ -62,11 +62,13 @@ if($num){
                     </div>
                     <div class="form-group">
                         <label style="font-weight:700;">위치</label>
-                        <?php
-                            foreach($placeArray as $key => $pa){
-                        ?>
-                            <option value="<?php echo $pa;?>" <?php if($rs->place==$pa){echo "selected";}?>><?php echo $key;?></option>
-                        <?php }?>
+                        <select class="custom-select rounded-0" id="place" name="place">
+                          <?php
+                              foreach($placeArray as $key => $pa){
+                          ?>
+                              <option value="<?php echo $pa;?>" <?php if($rs->place==$pa){echo "selected";}?>><?php echo $key;?></option>
+                          <?php }?>
+                      </select>
                     </div>
                     <div class="form-group">
                         <div id="summernote"><?echo content_is2($rs->content);?></div>
