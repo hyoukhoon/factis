@@ -219,7 +219,7 @@ while($rs = $result->fetch_object()){
         if(cnt==1){
             $("input[id='chkid']:checkbox").prop("checked", "checked");
         }else{
-            $("input[id='chkid']:checkbox").removeProp("checked");
+            $("input[id='chkid']:checkbox").prop("checked", false);
         }
 
     }
