@@ -222,7 +222,19 @@ while($rs = $result->fetch_object()){
             $("input[id='chkid']:checkbox").prop("checked", false);
         }
 
+        var checkArray=new Array();
+        var cnt=0;
+        $('input:checkbox[id="chkid"]').each(function() {
+			checkArray[cnt]=this.value;//배열로 저장
+			cnt++;
+	    });
+
+        alert(JSON.stringify(checkArray));
+
     }
+
+
+    
 </script>
 
 
