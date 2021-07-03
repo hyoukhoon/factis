@@ -400,8 +400,30 @@ function attachFile(file) {
 }
 
 function delAttch(fid,fn){
-  alert(fid);
-  alert(fn);
+
+  if(!confirm('삭제하시겠습니까?')){
+    return;
+  }
+
+  var params = "fn="+fn;
+  
+  $.ajax({
+      type: 'post'
+    , url: 'attDel.php'
+    , data : params
+    , dataType : 'json'
+    , success: function(data) {
+      //console.log(data.result);
+
+        if(data.result==1){
+          alert('삭제했습니다.');
+        }else{
+          alert('다시 시도해 주십시오.');
+          return;
+        }
+      }
+  });	
+  
 }
 
 </script>
