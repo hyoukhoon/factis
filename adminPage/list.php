@@ -13,7 +13,7 @@ $rs2 = $result2->fetch_array();
 $total=$rs2[0];
 
 $que="SELECT * FROM news c where 1=1 $where";
-$LIMIT=$_GET['LIMIT']??12;
+$LIMIT=$_GET['LIMIT']??10;
 $page=$_GET['page']??1;
 $start_page=($page-1)*$LIMIT;
 $end_page=$LIMIT;
@@ -28,8 +28,8 @@ $n_f_no=$f_no+$sub_size;//다음첫페이지
 $p_f_no=$f_no-$sub_size;//이전첫페이지
 $no=$total-($page-1)*$ps;//번호매기기
 
-//$limit_query=" order by num desc limit $start_page, $end_page";
-$limit_query=" order by num desc ";
+$limit_query=" order by num desc limit $start_page, $end_page";
+//$limit_query=" order by num desc ";
 $last_query=$que.$limit_query;
 $result = $mysqli->query($last_query) or die("3:".$mysqli->error);
 while($rs = $result->fetch_object()){
