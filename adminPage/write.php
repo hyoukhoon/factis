@@ -33,7 +33,7 @@ if($num){
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <i class="fas fa-2x fa-sync-alt"></i>
+
                 <form>
                     <input type="hidden" id="imgUrl" value="<?php echo $rs->file_list;?>">
                     <input type="hidden" id="attachFiles" value="<?php echo $rs->fn1;?>">
@@ -255,6 +255,7 @@ function saveUp(){
     var multi=$("#multi").val();
 		var imgUrl=$("#imgUrl").val();
     var attachFile=$("#attachFiles").val();
+    var attachName=$("#attachNames").val();
 		var content=$('#summernote').summernote('code');
 
     var place =$("#place option:selected").val();
@@ -272,7 +273,7 @@ function saveUp(){
 
 
 
-		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile+"&place="+place+"&cate="+cate;
+		var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile+"&attachName="+attachName+"&place="+place+"&cate="+cate;
 		// console.log(params);
     // return;
 		$.ajax({
