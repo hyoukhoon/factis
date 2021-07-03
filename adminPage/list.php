@@ -93,7 +93,7 @@ while($rs = $result->fetch_object()){
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>선택</th>
+                                            <th><input type="checkbox" class="chkAll"></th>
                                             <th>썸네일</th>
                                             <th>제목</th>
                                             <th>날짜</th>
@@ -142,7 +142,7 @@ while($rs = $result->fetch_object()){
 		    $rs=elaCurl($url,$data);
 ?>                                                 
         <tr>
-            <td><input type="checkbox" name="num[]" id="n_<?php echo $p->num;?>" value="<?php echo $p->num;?>"></td>
+            <td><input type="checkbox" class="chkbx" name="num[]" id="n_<?php echo $p->num;?>" value="<?php echo $p->num;?>"></td>
             <td>
             <?php 
                     if(!empty($img)){
@@ -207,6 +207,10 @@ while($rs = $result->fetch_object()){
         location.href='list.php?cate='+cate+'&place='+place;
         
     }
+
+    $('.chkAll').click( function() {
+        $('.chkbx').prop( 'checked', this.checked );
+    });
 </script>
 
 
