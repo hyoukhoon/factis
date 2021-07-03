@@ -57,7 +57,7 @@ while($rs = $result->fetch_object()){
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <select class="custom-select rounded-0" id="cate">
+                            <select class="custom-select rounded-0" style="width:auto;" id="cate">
                             <?php
                                 foreach($category as $ct){
                             ?>
