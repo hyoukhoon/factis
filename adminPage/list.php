@@ -208,7 +208,7 @@ while($rs = $result->fetch_object()){
         
     }
 
-    $('.chkAll').click( function() {
+    $(".chkAll").click( function() {
         //$('.chkbx').prop( 'checked', this.checked );
         alert('haha');
     });
