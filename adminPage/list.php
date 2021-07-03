@@ -57,7 +57,7 @@ while($rs = $result->fetch_object()){
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <select class="custom-select rounded-0" id="place" name="place" style="width:auto;">
+                            <select class="custom-select rounded-0" id="place" name="place" style="width:auto;" onchange="placeis()">
                                 <option value="" >위치전체</option>
                                 <?php
                                     foreach($placeArray as $key => $pa){
@@ -186,6 +186,14 @@ while($rs = $result->fetch_object()){
 
             </div>
             <!-- End of Main Content -->
+
+<script>
+    function placeis(){
+        var place=$("#place option:selected").val();
+        alert(place);
+    }
+</script>
+
 
 <?php 
 
