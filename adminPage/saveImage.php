@@ -14,14 +14,17 @@ $gubun=$_POST['gubun'];
 // print_r($_FILES);
 
 		if($_FILES['file']['size']>10240000){//10메가
-			echo "-1";
+			$data=array("result"=>-1);
+			echo json_encode($data); 
 			exit;
 		}
+		$ofn=$_FILES['file']['name'];
 		$ext = substr(strrchr($_FILES['file']['name'],"."),1);
 		$ext = strtolower($ext);
 		if ($ext != "jpg" and $ext != "png" and $ext != "jpeg" and $ext != "gif")
 		{
-			echo "-1";
+			$data=array("result"=>-1);
+			echo json_encode($data); 
 			exit;
 		}
 
@@ -41,6 +44,9 @@ $gubun=$_POST['gubun'];
 			$sql1=$mysqli->query($query) or die("3:".$mysqli->error);
 		}
 
-        echo '/news/upImages/'.$filename;
+        $fn='/news/upImages/'.$filename;
+
+		$data=array("result"=>1,"fid"=>$name,"fn"=>$fn,"ofn"=>$ofn);
+		echo json_encode($data); 
 
 ?>

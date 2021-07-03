@@ -36,6 +36,7 @@ if($num){
                 <form>
                     <input type="hidden" id="imgUrl" value="<?php echo $rs->file_list;?>">
                     <input type="hidden" id="attachFiles" value="<?php echo $rs->fn1;?>">
+                    <input type="hidden" id="attachNames" value="<?php echo $rs->fn2;?>">
                     
                     <div class="card-body">
                     <div class="form-group">
@@ -134,7 +135,7 @@ if($num){
                           <div class="mailbox-attachment-info">
                             <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i>첨부파일</a>
                                 <span class="mailbox-attachment-size clearfix mt-1">
-                                    <a href="#" class="float-right"><button type="button" class="btn btn-default btn-sm">
+                                    <a href="javascript:;" class="float-right"><button type="button" class="btn btn-default btn-sm">
                                     <i class="far fa-trash-alt"></i>
                                   </button></a>
                                 </span>
@@ -371,19 +372,26 @@ function attachFile(file) {
         cache: false,
         contentType: false,
         processData: false,
+        dataType : 'json',
         type: 'POST',
         success: function (data) {
-          if(data==-1){
+          if(data.result==-1){
             alert('용량이 너무크거나 이미지 파일이 아닙니다.');
             return;
           }else{
-            var img="<li><span class='mailbox-attachment-icon has-img'><img src='"+$.trim(data)+"' style='height:132px;padding:10px; ' alt='Attachment'></span><div class='mailbox-attachment-info'><a href='#' class='mailbox-attachment-name'><i class='fas fa-camera'></i>첨부파일</a><span class='mailbox-attachment-size clearfix mt-1'><a href='#' class='float-right'><button type='button' class='btn btn-default btn-sm'><i class='far fa-trash-alt'></i></button></a></span></div></li>";
+            var img="<li id='"+$.trim(data.name)+"'><span class='mailbox-attachment-icon has-img'><img src='"+$.trim(data.fn)+"' style='height:132px;padding:10px; ' alt='Attachment'></span><div class='mailbox-attachment-info'><a href='#' class='mailbox-attachment-name'><i class='fas fa-camera'></i>첨부파일</a><span class='mailbox-attachment-size clearfix mt-1'><a href='' class='float-right'><button type='button' class='btn btn-default btn-sm'><i class='far fa-trash-alt'></i></button></a></span></div></li>";
             $("#thumbnails").append(img);
             var attachFile=$("#attachFiles").val();
             if(attachFile){
               attachFile=attachFile+",";
             }
             $("#attachFiles").val(attachFile+$.trim(data));
+
+            var attachName=$("#attachNames").val();
+            if(attachName){
+              attachName=attachName+",";
+            }
+            $("#attachNames").val(attachName+$.trim(data.ofn));
 
           }
         }
