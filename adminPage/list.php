@@ -225,7 +225,7 @@ while($rs = $result->fetch_object()){
         var checkArray=new Array();
         var cnt=0;
         var uid="";
-        $('input:checkbox[id="chkid"]').each(function() {
+        $('input:checkbox[id="chkid"]:checked').each(function() {
 			//checkArray[cnt]=this.value;//배열로 저장
             uid+=this.value+",";
 			cnt++;
