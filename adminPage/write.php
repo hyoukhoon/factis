@@ -379,7 +379,7 @@ function attachFile(file) {
             alert('용량이 너무크거나 이미지 파일이 아닙니다.');
             return;
           }else{
-            var img="<li id='"+$.trim(data.fid)+"'><span class='mailbox-attachment-icon has-img'><img src='"+$.trim(data.fn)+"' style='height:132px;padding:10px; ' alt='Attachment'></span><div class='mailbox-attachment-info'><a href='#' class='mailbox-attachment-name'><i class='fas fa-camera'></i>첨부파일</a><span class='mailbox-attachment-size clearfix mt-1'><a href='javascript:;' onclick='delAttch(\""+$.trim(data.fid)+"\",\""+$.trim(data.fn)+"\")' class='float-right'><button type='button' class='btn btn-default btn-sm'><i class='far fa-trash-alt'></i></button></a></span></div></li>";
+            var img="<li id='"+$.trim(data.fid)+"'><span class='mailbox-attachment-icon has-img'><img src='"+$.trim(data.fn)+"' style='height:132px;padding:10px; ' alt='Attachment'></span><div class='mailbox-attachment-info'><a href='#' class='mailbox-attachment-name'><i class='fas fa-camera'></i>첨부파일</a><span class='mailbox-attachment-size clearfix mt-1'><a href='javascript:;' onclick='delAttch(\""+$.trim(data.fid)+"\",\""+$.trim(data.fn)+"\",\""+$.trim(data.ofn)+"\")' class='float-right'><button type='button' class='btn btn-default btn-sm'><i class='far fa-trash-alt'></i></button></a></span></div></li>";
             $("#thumbnails").append(img);
             var attachFile=$("#attachFiles").val();
             if(attachFile){
@@ -399,7 +399,7 @@ function attachFile(file) {
 
 }
 
-function delAttch(fid,fn){
+function delAttch(fid,fn,ofn){
 
   if(!confirm('삭제하시겠습니까?')){
     return;
@@ -416,6 +416,14 @@ function delAttch(fid,fn){
       //console.log(data.result);
 
         if(data.result==1){
+          var attachFile=$("#attachFiles").val();
+          attachFile=attachFile.replace(fn+",","");
+          $("#attachFiles").val(attachFile);
+
+          var attachName=$("#attachNames").val();
+          attachName=attachName.replace(ofn+",","");
+          $("#attachNames").val(attachName);
+
           $("#"+fid).hide();
         }else{
           alert('다시 시도해 주십시오.');
