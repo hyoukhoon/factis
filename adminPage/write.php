@@ -416,7 +416,7 @@ function delAttch(fid,fn){
       //console.log(data.result);
 
         if(data.result==1){
-          $("#"+fid).hidden();
+          $("#"+fid).hide();
         }else{
           alert('다시 시도해 주십시오.');
           return;
