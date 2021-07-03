@@ -13,7 +13,7 @@ $rs2 = $result2->fetch_array();
 $total=$rs2[0];
 
 $que="SELECT * FROM news c where 1=1 $where";
-$LIMIT=$_GET['LIMIT']??10;
+$LIMIT=$_GET['LIMIT']??30;
 $page=$_GET['page']??1;
 $start_page=($page-1)*$LIMIT;
 $end_page=$LIMIT;
@@ -56,9 +56,15 @@ while($rs = $result->fetch_object()){
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <!-- <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-                        </div> -->
+                        <div class="card-header py-3">
+                            <select class="custom-select rounded-0" id="cate">
+                            <?php
+                                foreach($category as $ct){
+                            ?>
+                                <option value="<?php echo $ct;?>" <?php if($rs->cate==$ct){echo "selected";}?>><?php echo $ct;?></option>
+                            <?php }?>
+                            </select>
+                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
