@@ -33,7 +33,7 @@ if($num){
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <i class="fas fa-2x fa-sync-alt fa-spin"></i>
+                <i class="fas fa-2x fa-sync-alt"></i>
                 <form>
                     <input type="hidden" id="imgUrl" value="<?php echo $rs->file_list;?>">
                     <input type="hidden" id="attachFiles" value="<?php echo $rs->fn1;?>">
