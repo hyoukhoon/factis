@@ -2,9 +2,19 @@
 
 
 $multi=$_GET["multi"];
+$place=$_GET["place"];
+$cate=$_GET["cate"];
 
 if($multi){
     $where = " and multi=".$multi;
+}
+
+if($place){
+    $where .= " and place=".$place;
+}
+
+if($cate){
+    $where .= " and cate=".$cate;
 }
 
 $que2="SELECT count(*) FROM news c where 1=1 $where";
@@ -190,7 +200,10 @@ while($rs = $result->fetch_object()){
 <script>
     function placeis(){
         var place=$("#place option:selected").val();
-        alert(place);
+        var cate=$("#cate option:selected").val();
+
+        location.href='list.php?cate='+cate+'&place='+place;
+        
     }
 </script>
 
