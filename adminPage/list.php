@@ -74,7 +74,7 @@ while($rs = $result->fetch_object()){
                                 <?php
                                     foreach($placeArray as $key => $pa){
                                 ?>
-                                    <option value="<?php echo $pa;?>" <?php if($rs->place=="trending_news"){echo "selected";}?>><?php echo $key;?></option>
+                                    <option value="<?php echo $pa;?>" <?php if($place==$pa){echo "selected";}?>><?php echo $key;?></option>
                                 <?php }?>
                             </select>
                             &nbsp;
@@ -83,7 +83,7 @@ while($rs = $result->fetch_object()){
                             <?php
                                 foreach($category as $ct){
                             ?>
-                                <option value="<?php echo $ct;?>" <?php if($rs->cate==$ct){echo "selected";}?>><?php echo $ct;?></option>
+                                <option value="<?php echo $ct;?>" <?php if($cate==$ct){echo "selected";}?>><?php echo $ct;?></option>
                             <?php }?>
                             </select>
 
