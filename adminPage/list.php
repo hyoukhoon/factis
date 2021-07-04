@@ -10,6 +10,10 @@ $ismain=$_GET["ismain"];
 //     $where = " and multi=".$multi;
 // }
 
+if($ismain){
+    $where .= " and ismain='".$ismain."'";
+}
+
 if($place){
     $where .= " and place='".$place."'";
 }
@@ -72,8 +76,8 @@ while($rs = $result->fetch_object()){
                         <div class="card-header py-3">
                             <select class="custom-select rounded-0" id="ismain" name="ismain" style="width:auto;" onchange="placeis()">
                                 <option value="" >메인전체</option>
-                                <option value="Y" <?php if($ismain=="Y"){echo "selected";}?>>Y</option>
-                                <option value="N" <?php if($ismain=="N"){echo "selected";}?>>N</option>
+                                <option value="1" <?php if($ismain==1){echo "selected";}?>>Y</option>
+                                <option value="0" <?php if($ismain==0){echo "selected";}?>>N</option>
                             </select>
                             <select class="custom-select rounded-0" id="place" name="place" style="width:auto;" onchange="placeis()">
                                 <option value="" >위치전체</option>
@@ -150,7 +154,7 @@ while($rs = $result->fetch_object()){
             <td><input type="checkbox" class="chkbx" name="num[]" id="chkid" value="<?php echo $p->num;?>"></td>
             <td>
                 <?php
-                    if($p->main){ echo "Y";}else{echo "N";}
+                    if($p->ismain){ echo "Y";}else{echo "N";}
                 ?>
             </td>
             <td>
