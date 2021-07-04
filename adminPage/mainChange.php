@@ -12,9 +12,6 @@ include $_SERVER['DOCUMENT_ROOT']."/inc/dbcon.php";
 
     $uid=rtrim($uid,",");
 	$query="update news set ismain = case when ismain=1 then 0 else 1 end where num in (".$uid.")";
-    echo $query;
-    exit;
-
 	$sql1=$mysqli->query($query) or die("3:".$mysqli->error);
 
 
