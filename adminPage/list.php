@@ -4,6 +4,7 @@
 $multi=$_GET["multi"];
 $place=$_GET["place"];
 $cate=$_GET["cate"];
+$ismain=$_GET["ismain"];
 
 // if($multi){
 //     $where = " and multi=".$multi;
@@ -69,6 +70,11 @@ while($rs = $result->fetch_object()){
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
+                            <select class="custom-select rounded-0" id="ismain" name="ismain" style="width:auto;" onchange="placeis()">
+                                <option value="" >메인전체</option>
+                                <option value="Y" <?php if($ismain=="Y"){echo "selected";}?>>Y</option>
+                                <option value="N" <?php if($ismain=="N"){echo "selected";}?>>N</option>
+                            </select>
                             <select class="custom-select rounded-0" id="place" name="place" style="width:auto;" onchange="placeis()">
                                 <option value="" >위치전체</option>
                                 <?php
@@ -92,7 +98,7 @@ while($rs = $result->fetch_object()){
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
-                                        <tr>
+                                        <tr align="center">
                                             <th><input type="checkbox" class="chkAll" onclick="chkAll()" id="chkAll"></th>
                                             <th>메인</th>
                                             <th>썸네일</th>
@@ -205,8 +211,9 @@ while($rs = $result->fetch_object()){
     function placeis(){
         var place=$("#place option:selected").val();
         var cate=$("#cate option:selected").val();
+        var ismain=$("#ismain option:selected").val();
 
-        location.href='list.php?cate='+cate+'&place='+place;
+        location.href='list.php?cate='+cate+'&place='+place+'&ismain='+ismain;
         
     }
 
