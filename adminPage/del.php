@@ -4,19 +4,6 @@ include $_SERVER['DOCUMENT_ROOT']."/inc/dbcon.php";
 
 $num=$_GET['num'];
 
-//엘라스틱 삭제
-$data = '{
-	"query" : {
-		"match" : {
-			"id" : "'.$num.'"
-		}
-	}
-}';
-
-$url="localhost:9200/news/post/".$num;
-$rs=elaCurl($url,$data);
-
-exit;
 
 	$result=$mysqli->query("select * from news where num='$num' $where") or die("3:".$mysqli->error);
 	$rs = $result->fetch_object();
@@ -42,7 +29,17 @@ exit;
 
 	if($sql1){
 
-		
+		//엘라스틱 삭제
+		$data = '{
+			"query" : {
+				"match" : {
+					"id" : "'.$num.'"
+				}
+			}
+		}';
+
+		$url="localhost:9200/news/post/".$num;
+		$rs=elaCurl($url,$data);
 
 		location_is('list.php','','삭제했습니다');
 	}else{
