@@ -252,7 +252,31 @@ while($rs = $result->fetch_object()){
 			cnt++;
 	    });
 
-        alert(uid);
+        //alert(uid);
+
+        var params = "uid="+uid;
+		// console.log(params);
+        // return;
+		$.ajax({
+			  type: 'post'
+			, url: 'mainChange.php'
+			, data : params
+			, dataType : 'json'
+			, success: function(data) {
+				//console.log(data.result);
+
+				if(data.result==1){
+					alert('수정했습니다.');
+					location.reload();
+				}else if(data.result==-1){
+					alert(data.val);
+					return;
+				}else{
+					alert('다시 시도해 주십시오.');
+					return;
+				}
+			  }
+		});	
 
     }
 
