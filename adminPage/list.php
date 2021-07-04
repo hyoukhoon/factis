@@ -75,7 +75,7 @@ while($rs = $result->fetch_object()){
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <select class="custom-select rounded-0" id="ismain" name="ismain" style="width:auto;" onchange="placeis()">
-                                <option value="" >메인전체</option>
+                                <option value="" <?php if(!isset($ismain)){echo "selected";}?>>메인전체</option>
                                 <option value="1" <?php if($ismain==1){echo "selected";}?>>Y</option>
                                 <option value="0" <?php if($ismain==0){echo "selected";}?>>N</option>
                             </select>
