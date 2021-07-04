@@ -156,8 +156,6 @@ while($rs = $result->fetch_object()){
             </td>
             <td><a href="view.php?num=<?php echo $p->num;?>"><?php echo $p->subject;?></a></td>
             <td><?php echo date("Y.m.d",strtotime($p->reg_date));?></td>
-            <td></td>
-            <td></td>
         </tr>
 <?php 
 }?>                                           
