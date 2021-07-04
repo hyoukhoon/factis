@@ -25,6 +25,17 @@
 	$placeArray=array("Trending News"=>"trending_news","Second News"=>"second_news","Feature News"=>"feature_news");
 
 
+	function elaCurl($url,$data){
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_USERPWD, "elastic:soon06051007");
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+		curl_setopt($ch, CURLOPT_POST, true);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		return curl_exec($ch);
+	}
 
 function conv_eu($text){
 	return mb_convert_encoding("$text","EUC-KR","UTF-8");

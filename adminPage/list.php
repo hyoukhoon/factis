@@ -244,17 +244,7 @@ while($rs = $result->fetch_object()){
 
 <?php 
 
-function elaCurl($url,$data){
 
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_USERPWD, "elastic:soon06051007");
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-	curl_setopt($ch, CURLOPT_POST, true);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	return curl_exec($ch);
-}
 
 include $_SERVER["DOCUMENT_ROOT"]."/adminPage/footer.php";            ?>
 
