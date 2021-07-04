@@ -238,6 +238,7 @@ function sendFile($summernote, file) {
             alert('용량이 너무크거나 이미지 파일이 아닙니다.');
             return;
           }else{
+            console.log("img=>"+data.fn);
             $summernote.summernote('insertImage', data.fn, function ($image) {
               $image.attr('src', $.trim(data.fn));
               $image.attr('class', 'childImg');
