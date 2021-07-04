@@ -233,19 +233,19 @@ function sendFile($summernote, file) {
         processData: false,
         type: 'POST',
         success: function (data) {
-			if(data==-1){
+			if(data.result==-1){
 				alert('용량이 너무크거나 이미지 파일이 아닙니다.');
 				return;
 			}else{
 				$summernote.summernote('insertImage', data, function ($image) {
-					$image.attr('src', $.trim(data));
+					$image.attr('src', $.trim(data.fn));
 					$image.attr('class', 'childImg');
 				});
 				var imgUrl=$("#imgUrl").val();
 				if(imgUrl){
 					imgUrl=imgUrl+",";
 				}
-				$("#imgUrl").val(imgUrl+$.trim(data));
+				$("#imgUrl").val(imgUrl+$.trim(data.fn));
 			}
         }
     });
