@@ -234,20 +234,20 @@ function sendFile($summernote, file) {
         type: 'POST',
         dataType : 'json',
         success: function (data) {
-			if(data.result==-1){
-				alert('용량이 너무크거나 이미지 파일이 아닙니다.');
-				return;
-			}else{
-				$summernote.summernote('insertImage', data, function ($image) {
-					$image.attr('src', $.trim(data.fn));
-					$image.attr('class', 'childImg');
-				});
-				var imgUrl=$("#imgUrl").val();
-				if(imgUrl){
-					imgUrl=imgUrl+",";
-				}
-				$("#imgUrl").val(imgUrl+$.trim(data.fn));
-			}
+          if(data.result==-1){
+            alert('용량이 너무크거나 이미지 파일이 아닙니다.');
+            return;
+          }else{
+            $summernote.summernote('insertImage', data.fn, function ($image) {
+              $image.attr('src', $.trim(data.fn));
+              $image.attr('class', 'childImg');
+            });
+            var imgUrl=$("#imgUrl").val();
+            if(imgUrl){
+              imgUrl=imgUrl+",";
+            }
+            $("#imgUrl").val(imgUrl+$.trim(data.fn));
+          }
         }
     });
 
