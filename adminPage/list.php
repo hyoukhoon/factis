@@ -140,7 +140,7 @@ while($rs = $result->fetch_object()){
             $url="localhost:9200/news/post/".$p->num;
 		    $rs=elaCurl($url,$data);
 ?>                                                 
-        <tr>
+        <tr align="center">
             <td><input type="checkbox" class="chkbx" name="num[]" id="chkid" value="<?php echo $p->num;?>"></td>
             <td>
                 <?php
@@ -151,10 +151,10 @@ while($rs = $result->fetch_object()){
             <?php 
                     if(!empty($img)){
                     ?>
-                        <a href="view.php?num=<?php echo $p->num;?>"><img src="<?php echo $img[0];?>" width="50"></a>
+                        <a href="view.php?num=<?php echo $p->num;?>"><img src="<?php echo $img[0];?>" width="100"></a>
                     <?php }?>
             </td>
-            <td><a href="view.php?num=<?php echo $p->num;?>"><?php echo $p->subject;?></a></td>
+            <td align="left"><a href="view.php?num=<?php echo $p->num;?>"><?php echo $p->subject;?></a></td>
             <td><?php echo date("Y.m.d",strtotime($p->reg_date));?></td>
         </tr>
 <?php 
