@@ -98,7 +98,7 @@ while($rs = $result->fetch_object()){
                             </select>
 
                             <div style="float:right;">
-                                <button type="button" class="btn btn-secondary" id="ismain">메인변경</button>
+                                <button type="button" class="btn btn-secondary" id="ismain" onclick="mainis()">메인변경</button>
                             </div>
 
                         </div>
@@ -238,6 +238,10 @@ while($rs = $result->fetch_object()){
         }else{
             $("input[id='chkid']:checkbox").prop("checked", false);
         }
+        //alert(JSON.stringify(checkArray));
+    }
+
+    function mainis(){
 
         var checkArray=new Array();
         var cnt=0;
@@ -249,8 +253,6 @@ while($rs = $result->fetch_object()){
 	    });
 
         alert(uid);
-
-        //alert(JSON.stringify(checkArray));
 
     }
 
