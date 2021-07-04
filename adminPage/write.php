@@ -18,6 +18,13 @@ if($num){
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
 <link href="/adminPage/css/adminlte.css" rel="stylesheet">
+
+<style>
+    .childImg{
+        max-width:90%;
+    }
+</style>
+
             <!-- Main Content -->
             <div id="content">
                 <!-- Topbar -->
