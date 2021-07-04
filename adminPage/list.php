@@ -94,11 +94,10 @@ while($rs = $result->fetch_object()){
                                     <thead>
                                         <tr>
                                             <th><input type="checkbox" class="chkAll" onclick="chkAll()" id="chkAll"></th>
+                                            <th>메인</th>
                                             <th>썸네일</th>
                                             <th>제목</th>
                                             <th>날짜</th>
-                                            <th></th>
-                                            <th></th>
                                         </tr>
                                     </thead>
                                     <!-- <tfoot>
@@ -143,6 +142,11 @@ while($rs = $result->fetch_object()){
 ?>                                                 
         <tr>
             <td><input type="checkbox" class="chkbx" name="num[]" id="chkid" value="<?php echo $p->num;?>"></td>
+            <td>
+                <?php
+                    if($p->main){ echo "Y";}else{echo "N";}
+                ?>
+            </td>
             <td>
             <?php 
                     if(!empty($img)){
