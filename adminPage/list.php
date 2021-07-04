@@ -97,6 +97,10 @@ while($rs = $result->fetch_object()){
                             <?php }?>
                             </select>
 
+                            <div style="float:right;">
+                                <button type="button" class="btn btn-secondary" id="ismain">메인변경</button>
+                            </div>
+
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -195,7 +199,7 @@ while($rs = $result->fetch_object()){
     <?php }?>
 	</ul>
 </div>
-<div style="float:right;">
+    <div style="float:right;">
         <a href="write.php">
             <button type="button" class="btn btn-secondary">등록</button>
         </a>
