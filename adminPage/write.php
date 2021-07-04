@@ -232,6 +232,7 @@ function sendFile($summernote, file) {
         contentType: false,
         processData: false,
         type: 'POST',
+        dataType : 'json',
         success: function (data) {
 			if(data.result==-1){
 				alert('용량이 너무크거나 이미지 파일이 아닙니다.');
@@ -287,7 +288,7 @@ function saveUp(){
 		$.ajax({
 			  type: 'post'
 			, url: 'saveUpOk.php'
-			,data : params
+			, data : params
 			, dataType : 'json'
 			, success: function(data) {
 				//console.log(data.result);
