@@ -77,7 +77,7 @@ while($rs = $result->fetch_object()){
                             <select class="custom-select rounded-0" id="ismain" name="ismain" style="width:auto;" onchange="placeis()">
                                 <option value="" <?php if(!isset($ismain)){echo "selected";}?>>메인전체</option>
                                 <option value="1" <?php if($ismain==1){echo "selected";}?>>Y</option>
-                                <option value="0" <?php if($ismain==0){echo "selected";}?>>N</option>
+                                <option value="0" <?php if(isset($ismain)==0){echo "selected";}?>>N</option>
                             </select>
                             <select class="custom-select rounded-0" id="place" name="place" style="width:auto;" onchange="placeis()">
                                 <option value="" >위치전체</option>
