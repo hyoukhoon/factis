@@ -343,9 +343,11 @@ if ($('#summernote').summernote('isEmpty')) {
 
 
 
+
+
 var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile+"&num=<?php echo $num;?>&place="+place+"&cate="+cate;
-// console.log(params);
-// return;
+console.log(content);
+return;
 
 $.ajax({
     type: 'post'
