@@ -1,11 +1,22 @@
-<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";?>
+<?php include $_SERVER["DOCUMENT_ROOT"]."/inc/header.php";
+
+$id=$_GET['id'];
+$result = $mysqli->query("select * from news where num=".$id);
+$rs = $result->fetch_object();
+
+if(!$rs->num){
+	location_is('','','해당뉴스가 존재 하지 않습니다.');
+	exit;
+}
+	
+?>
 
 	<!--::::: ARCHIVE AREA START :::::::-->
 	<div class="archives post post1 padding-top-30">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<div class="bridcrumb">	<a href="#">Home</a> / Archive / post 1</div>
+					<div class="bridcrumb">	<a href="#">Home</a> / <?php echo $rs->cate;?></div>
 				</div>
 			</div>
 			<div class="space-30"></div>
@@ -14,7 +25,7 @@
 					<div class="row">
 						<div class="col-4 align-self-center">
 							<div class="page_category">
-								<h4>HEALTH</h4>
+								<h4><?php echo $rs->cate;?></h4>
 							</div>
 						</div>
 						<div class="col-8 text-right">
@@ -28,7 +39,7 @@
 					</div>
 					<div class="space-30"></div>
 					<div class="single_post_heading">
-						<h1>Japan’s virus success has puzzled the world. Is its luck running out?</h1>
+						<h1><?php echo stripslashes($rs->subject);?></h1>
 						<div class="space-10"></div>
 						<p>The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
 					</div>
