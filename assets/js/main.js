@@ -533,16 +533,16 @@ jQuery(document).ready(function($) {
 
 
   //JQUERY LOEAD FUNCTION
-  jQuery(window).on("load", function() {
+  // jQuery(window).on("load", function() {
      
-      function handlePreloader() {
-          var preloader = $('.preloader');
-          if(preloader.length){
-          preloader.delay(200).fadeOut(500);
-          }
-      }
-      handlePreloader(); 
-  });
+  //     function handlePreloader() {
+  //         var preloader = $('.preloader');
+  //         if(preloader.length){
+  //         preloader.delay(200).fadeOut(500);
+  //         }
+  //     }
+  //     handlePreloader(); 
+  // });
 
 
 }(jQuery));
