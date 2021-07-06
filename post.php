@@ -46,7 +46,7 @@ if(!$rs->num){
 					<?php
 						if($rs->url){
 					?>
-							<iframe width="100%" src="<?php echo $tn->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe width="100%" src="<?php echo $rs->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<?php
 						}else{
 						$thumb=explode(",",$rs->fn1);
