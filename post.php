@@ -41,10 +41,18 @@ if(!$rs->num){
 					<div class="single_post_heading">
 						<h1><?php echo stripslashes($rs->subject);?></h1>
 						<div class="space-10"></div>
-						<p>The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
 					</div>
 					<div class="space-40"></div>
-					<img src="assets/img/blog/single_post1.jpg" alt="image">
+					<?php
+						if($rs->url){
+					?>
+							<iframe width="100%" src="<?php echo $tn->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<?php
+						}else{
+						$thumb=explode(",",$rs->fn1);
+					?>
+						<img src="<?php echo $thumb[0];?>" style="max-width:100%;">
+					<?php }?>
 					<div class="space-20"></div>
 					<div class="row">
 						<div class="col-lg-6 align-self-center">
