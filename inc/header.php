@@ -23,11 +23,11 @@
 
 <body class="theme-1">
 	<!--::::: PRELOADER START :::::::-->
-	<div class="preloader">
+	<!-- <div class="preloader">
 		<div>
 			<div class="nb-spinner"></div>
 		</div>
-	</div>
+	</div> -->
 	<!--::::: PRELOADER END :::::::-->
 
 	<!--::::: SEARCH FORM START:::::::-->
