@@ -91,7 +91,7 @@
 							<div class="meta3">	<a href="#"><?php echo $tn->cate;?></a>
 								<a href="#"><?php echo date("Y.m.d",strtotime($tn->reg_date));?></a>
 							</div>
-							<h4><a href="post.php"><?php echo $tn->title;?></a></h4>
+							<h4><a href="post.php?id=<?php echo $tn->id;?>"><?php echo $tn->title;?></a></h4>
 							<div class="space-10"></div>
 							<p class="post-p"><?php echo $tn->main_text;?></p>
 						</div>
