@@ -8,6 +8,13 @@ if(!$rs->num){
 	location_is('','','해당뉴스가 존재 하지 않습니다.');
 	exit;
 }
+
+
+$result0 = $mysqli->query("select num,subject from news where num  = (select max(num) as id from news where num<".$id.")");
+$rs0 = $result0->fetch_object();
+
+$result2 = $mysqli->query("select num,subject from news where num  = (select min(num) as id from news where num>".$id.")");
+$rs2 = $result2->fetch_object();
 	
 ?>
 
@@ -110,13 +117,13 @@ if(!$rs->num){
 							<div class="col-lg-6 align-self-center">
 								<div class="next_prv_single border_left3">
 									<p>PREVIOUS NEWS</p>
-									<h3><a href="#">Kushner puts himself in middle of white house’s chaotic coronavirus response.</a></h3>
+									<h3><a href="post.php?id=<?php echo $rs0->num?>"><?php echo stripslashes($rs0->subject??"이전 뉴스가 없습니다.");?></a></h3>
 								</div>
 							</div>
 							<div class="col-lg-6 align-self-center">
 								<div class="next_prv_single border_left3">
 									<p>NEXT NEWS</p>
-									<h3><a href="#">C.I.A. Hunts for authentic virus totals in china, dismissing government tallies</a></h3>
+									<h3><a href="post.php?id=<?php echo $rs2->num?>"><?php echo stripslashes($rs2->subject??"다음 뉴스가 없습니다.");?></a></h3>
 								</div>
 							</div>
 						</div>
