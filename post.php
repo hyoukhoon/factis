@@ -10,10 +10,10 @@ if(!$rs->num){
 }
 
 
-$result0 = $mysqli->query("select num,subject from news where cate='".$rs->cate."' and num  = (select max(num) as id from news where num<".$id.")");
+$result0 = $mysqli->query("select num,subject from news where num  = (select max(num) as id from news where cate='".$rs->cate."' and num<".$id.")");
 $rs0 = $result0->fetch_object();
 
-$result2 = $mysqli->query("select num,subject from news where cate='".$rs->cate."' and num  = (select min(num) as id from news where num>".$id.")");
+$result2 = $mysqli->query("select num,subject from news where num  = (select min(num) as id from news where cate='".$rs->cate."' and num>".$id.")");
 $rs2 = $result2->fetch_object();
 	
 ?>
