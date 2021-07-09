@@ -15,6 +15,39 @@ $rs0 = $result0->fetch_object();
 
 $result2 = $mysqli->query("select num,subject from news where num  = (select min(num) as id from news where cate='".$rs->cate."' and num>".$id.")");
 $rs2 = $result2->fetch_object();
+
+
+	$LIMIT=5;
+	$ord='{"id":"desc"}';
+	//$ord='{"cnt":"desc"}';
+	$from=0;
+	$json='
+	{
+		"query": { 
+			"bool": { 
+				"filter": [ 
+					{ 
+						"term":  { 
+								"place": "'.$rs->place.'" 
+								}
+					},
+					{ 
+						"range": { 
+							"cnt": { "gt": "0" }
+							}
+					} 
+				]
+			}
+		},
+		"size": '.$LIMIT.',
+		"from": '.$from.',
+		"sort": '.$ord.'
+	}
+	';
+
+$rs=newsList($json);
+echo "<pre>";
+print_r($rs);
 	
 ?>
 

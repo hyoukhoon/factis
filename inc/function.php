@@ -24,6 +24,32 @@
 	$category=array("대통령","사회","경제","정치","스포츠","연예","시사","문화");
 	$placeArray=array("Trending News"=>"trending_news","Second News"=>"second_news","Feature News"=>"feature_news");
 
+	function newsList($json){
+
+		$url="http://localhost:9200/news/_search?pretty";
+
+		$ch = curl_init(); // 리소스 초기화
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_USERPWD, "elastic:soon06051007");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_POST, true);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+		'Content-Type: application/json'
+		));
+
+		$output = curl_exec($ch); // 데이터 요청 후 수신
+		$output=json_decode($output);
+		curl_close($ch);  // 리소스 해제
+
+		foreach($output->hits->hits as $rs){
+			$rsc[$rs->_source->place][]=$rs->_source;
+		}
+
+		return $rsc;
+
+	}
+
 
 	function elaCurl($url,$data){
 
