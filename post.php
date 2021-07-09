@@ -98,9 +98,6 @@ $rs2 = $result2->fetch_object();
 	';
 	$top5=newsList($json,"all");
 
-	echo "<pre>";
-	print_r($top5);
-	
 	
 ?>
 
@@ -228,6 +225,9 @@ $rs2 = $result2->fetch_object();
 						<div class="tab-content">
 							<div id="post1" class="tab-pane fade in active show">
 								<div class="widget tab_widgets mb30">
+<?php
+	foreach($pr[$rs->place] as $p){
+?>
 									<div class="single_post widgets_small">
 										<div class="post_img">
 											<div class="img_wrap">
@@ -237,84 +237,17 @@ $rs2 = $result2->fetch_object();
 											</div>
 										</div>
 										<div class="single_post_text">
-											<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
+											<div class="meta2 meta_separator1">	<a href="#"><?php echo $p->cate;?></a>
 												<a href="#">March 26, 2020</a>
 											</div>
-											<h4><a href="post1.html">Copa America: Luis Suarez from devastated US</a></h4>
+											<h4><a href="post.php?id=<?php echo $p->id;?>"><?php echo $p->title;?></a></h4>
 										</div>
 									</div>
 									<div class="space-15"></div>
 									<div class="border_black"></div>
 									<div class="space-15"></div>
-									<div class="single_post widgets_small">
-										<div class="post_img">
-											<div class="img_wrap">
-												<a href="#">
-													<img src="assets/img/header/widget/tab2.jpg" alt="">
-												</a>
-											</div>
-										</div>
-										<div class="single_post_text">
-											<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-												<a href="#">March 26, 2020</a>
-											</div>
-											<h4><a href="post1.html">Nancy Zhang a Chinese busy woman and Dhaka</a></h4>
-										</div>
-									</div>
-									<div class="space-15"></div>
-									<div class="border_black"></div>
-									<div class="space-15"></div>
-									<div class="single_post widgets_small">
-										<div class="post_img">
-											<div class="img_wrap">
-												<a href="#">
-													<img src="assets/img/header/widget/tab3.jpg" alt="">
-												</a>
-											</div>
-										</div>
-										<div class="single_post_text">
-											<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-												<a href="#">March 26, 2020</a>
-											</div>
-											<h4><a href="post1.html">U.S. Response subash says he will label regions by risk of…</a></h4>
-										</div>
-									</div>
-									<div class="space-15"></div>
-									<div class="border_black"></div>
-									<div class="space-15"></div>
-									<div class="single_post widgets_small">
-										<div class="post_img">
-											<div class="img_wrap">
-												<a href="#">
-													<img src="assets/img/header/widget/tab4.jpg" alt="">
-												</a>
-											</div>
-										</div>
-										<div class="single_post_text">
-											<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-												<a href="#">March 26, 2020</a>
-											</div>
-											<h4><a href="post1.html">Venezuela elan govt and opposit the property collect</a></h4>
-										</div>
-									</div>
-									<div class="space-15"></div>
-									<div class="border_black"></div>
-									<div class="space-15"></div>
-									<div class="single_post widgets_small">
-										<div class="post_img">
-											<div class="img_wrap">
-												<a href="#">
-													<img src="assets/img/header/widget/tab5.jpg" alt="">
-												</a>
-											</div>
-										</div>
-										<div class="single_post_text">
-											<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-												<a href="#">March 26, 2020</a>
-											</div>
-											<h4><a href="post1.html">Cheap smartphone sensor could help you old food safe</a></h4>
-										</div>
-									</div>
+<?php }?>
+									
 								</div>
 							</div>
 							<div id="post2" class="tab-pane fade">
