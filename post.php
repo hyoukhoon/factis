@@ -96,7 +96,7 @@ $rs2 = $result2->fetch_object();
 		"sort": '.$ord.'
 	}
 	';
-	$top5=newsList($json);
+	$top5=newsList($json,"all");
 
 	echo "<pre>";
 	print_r($top5);

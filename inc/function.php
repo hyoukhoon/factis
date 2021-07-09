@@ -24,7 +24,7 @@
 	$category=array("대통령","사회","경제","정치","스포츠","연예","시사","문화");
 	$placeArray=array("Trending News"=>"trending_news","Second News"=>"second_news","Feature News"=>"feature_news");
 
-	function newsList($json){
+	function newsList($json,$type){
 
 		$url="http://localhost:9200/news/_search?pretty";
 
@@ -42,8 +42,14 @@
 		$output=json_decode($output);
 		curl_close($ch);  // 리소스 해제
 
-		foreach($output->hits->hits as $rs){
-			$rsc[$rs->_source->place][]=$rs->_source;
+		if($type=="all"){
+			foreach($output->hits->hits as $rs){
+				$rsc[]=$rs->_source;
+			}
+		}else{
+			foreach($output->hits->hits as $rs){
+				$rsc[$rs->_source->place][]=$rs->_source;
+			}
 		}
 
 		return $rsc;
