@@ -326,6 +326,7 @@ var multi=$("#multi").val();
 var imgUrl=$("#imgUrl").val();
 var attachFile=$("#attachFiles").val();
 var content=$('#summernote').summernote('code');
+content=content.replace("&nbsp;"," ");
 
 //var place =$('input:radio[name="place"]:checked').val();
 var place =$("#place option:selected").val();
@@ -346,8 +347,8 @@ if ($('#summernote').summernote('isEmpty')) {
 
 
 var params = "subject="+subject+"&content="+content+"&youtube="+youtube+"&main_text="+main_text+"&imgUrl="+imgUrl+"&multi="+multi+"&attachFile="+attachFile+"&num=<?php echo $num;?>&place="+place+"&cate="+cate;
-console.log(params);
-return;
+// console.log(params);
+// return;
 
 $.ajax({
     type: 'post'
