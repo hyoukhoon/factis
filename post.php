@@ -132,11 +132,11 @@ $rs2 = $result2->fetch_object();
 				<div class="col-md-6 col-lg-4">
 					<div class="widget_tab md-mt-30">
 						<ul class="nav nav-tabs">
-							<li><a class="active" data-toggle="tab" href="#post1">RELATED</a>
+							<li><a class="active" data-toggle="tab" href="#post1">RELATED1</a>
 							</li>
-							<li><a data-toggle="tab" href="#post2" class="">RELATED</a>
+							<li><a data-toggle="tab" href="#post2" class="">RELATED2</a>
 							</li>
-							<li><a data-toggle="tab" href="#post3" class="">POPULAR</a>
+							<li><a data-toggle="tab" href="#post3" class="">POPULAR3</a>
 							</li>
 						</ul>
 						<div class="tab-content">
