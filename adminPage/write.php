@@ -326,7 +326,7 @@ var multi=$("#multi").val();
 var imgUrl=$("#imgUrl").val();
 var attachFile=$("#attachFiles").val();
 var content=$('#summernote').summernote('code');
-content=content.replace("&nbsp;"," ");
+content=content.replace("/&nbsp;/gi"," ");
 
 //var place =$('input:radio[name="place"]:checked').val();
 var place =$("#place option:selected").val();
