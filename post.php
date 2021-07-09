@@ -129,6 +129,9 @@ $rs2 = $result2->fetch_object();
 						</div>
 					</div>
 				</div>
+				<div>
+							ADS
+				</div>
 				<div class="col-md-6 col-lg-4">
 					<div class="widget_tab md-mt-30">
 						<ul class="nav nav-tabs">
