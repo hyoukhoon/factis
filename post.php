@@ -7,6 +7,8 @@ $rs = $result->fetch_object();
 if(!$rs->num){
 	location_is('','','해당뉴스가 존재 하지 않습니다.');
 	exit;
+}else{
+	$sql1=$mysqli->query("update news set cnt=cnt+1 where num=".$id) or die("3:".$mysqli->error);
 }
 
 
@@ -215,11 +217,11 @@ $rs2 = $result2->fetch_object();
 				<div class="col-md-6 col-lg-4">
 					<div class="widget_tab md-mt-30">
 						<ul class="nav nav-tabs">
-							<li><a class="active" data-toggle="tab" href="#post1">RELATED1</a>
+							<li><a class="active" data-toggle="tab" href="#post1">RELATED</a>
 							</li>
-							<li><a data-toggle="tab" href="#post2" class="">RELATED2</a>
+							<li><a data-toggle="tab" href="#post2" class="">RELATED</a>
 							</li>
-							<li><a data-toggle="tab" href="#post3" class="">POPULAR3</a>
+							<li><a data-toggle="tab" href="#post3" class="">POPULAR</a>
 							</li>
 						</ul>
 						<div class="tab-content">
