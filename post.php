@@ -290,10 +290,10 @@ $rs2 = $result2->fetch_object();
 											</div>
 										</div>
 										<div class="single_post_text">
-											<div class="meta2 meta_separator1">	<a href="#"><?php echo $c->cate;?></a>
+											<div class="meta2 meta_separator1">	<a href="#"><?php echo $t->cate;?></a>
 												<a href="#">March 26, 2020</a>
 											</div>
-											<h4><a href="post.php?id=<?php echo $c->id;?>"><?php echo $c->title;?></a></h4>
+											<h4><a href="post.php?id=<?php echo $t->id;?>"><?php echo $t->title;?></a></h4>
 										</div>
 									</div>
 									<div class="space-15"></div>
