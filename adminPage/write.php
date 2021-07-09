@@ -274,6 +274,7 @@ function saveUp(){
     var attachFile=$("#attachFiles").val();
     var attachName=$("#attachNames").val();
 		var content=$('#summernote').summernote('code');
+    content=encodeURIComponent(content);
 
     var place =$("#place option:selected").val();
     var cate = $("#cate option:selected").val();
