@@ -24,7 +24,7 @@
 	$category=array("대통령","사회","경제","정치","스포츠","연예","시사","문화");
 	$placeArray=array("Trending News"=>"trending_news","Second News"=>"second_news","Feature News"=>"feature_news");
 
-	function newsList($json,$type){
+	function newsList($json,$type=null){
 
 		$url="http://localhost:9200/news/_search?pretty";
 
