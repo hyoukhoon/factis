@@ -73,10 +73,7 @@ $rs2 = $result2->fetch_object();
 		"sort": '.$ord.'
 	}
 	';
-	$cr=newsList($json);
-
-	echo "<pre>";
-	print_r($cr);
+	$cr=newsList($json,"all");
 
 	$LIMIT=5;
 	$ord='{"cnt":"desc"}';
@@ -256,7 +253,7 @@ $rs2 = $result2->fetch_object();
 							<div id="post2" class="tab-pane fade">
 								<div class="widget tab_widgets mb30">
 <?php
-	foreach($cr[$rs->cate] as $c){
+	foreach($cr as $c){
 ?>								
 									<div class="single_post widgets_small">
 										<div class="post_img">
