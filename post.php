@@ -44,10 +44,63 @@ $rs2 = $result2->fetch_object();
 		"sort": '.$ord.'
 	}
 	';
+	$pr=newsList($json);
 
-$rs=newsList($json);
-echo "<pre>";
-print_r($rs);
+	$LIMIT=5;
+	$ord='{"id":"desc"}';
+	//$ord='{"cnt":"desc"}';
+	$from=0;
+	$json='
+	{
+		"query": { 
+			"bool": { 
+				"filter": [ 
+					{ 
+						"term":  { 
+								"cate": "'.$rs->cate.'" 
+								}
+					},
+					{ 
+						"range": { 
+							"cnt": { "gt": "0" }
+							}
+					} 
+				]
+			}
+		},
+		"size": '.$LIMIT.',
+		"from": '.$from.',
+		"sort": '.$ord.'
+	}
+	';
+	$cr=newsList($json);
+
+	$LIMIT=5;
+	$ord='{"cnt":"desc"}';
+	$from=0;
+	$json='
+	{
+		"query": { 
+			"bool": { 
+				"filter": [ 
+					{ 
+						"range": { 
+							"cnt": { "gt": "0" }
+							}
+					} 
+				]
+			}
+		},
+		"size": '.$LIMIT.',
+		"from": '.$from.',
+		"sort": '.$ord.'
+	}
+	';
+	$top5=newsList($json);
+
+	echo "<pre>";
+	print_r($top5);
+	
 	
 ?>
 
