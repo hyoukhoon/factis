@@ -75,6 +75,9 @@ $rs2 = $result2->fetch_object();
 	';
 	$cr=newsList($json);
 
+	echo "<pre>";
+	print_r($cr);
+
 	$LIMIT=5;
 	$ord='{"cnt":"desc"}';
 	$from=0;
