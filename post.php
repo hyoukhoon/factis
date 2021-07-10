@@ -138,7 +138,7 @@ $rs2 = $result2->fetch_object();
 					<?php
 						if($rs->url){
 					?>
-							<iframe style="width:100%;height:600px;" src="<?php echo $rs->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe style="width:100%;height:400px;" src="<?php echo $rs->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<?php
 						}else{
 						$thumb=explode(",",$rs->fn1);
