@@ -228,7 +228,7 @@ $rs2 = $result2->fetch_object();
 							<div id="post1" class="tab-pane fade in active show">
 								<div class="widget tab_widgets mb30">
 <?php
-	print_r($pr[$rs->place]);
+	//print_r($pr[$rs->place]);
 	foreach($pr[$rs->place] as $p){
 ?>
 									<div class="single_post widgets_small">
