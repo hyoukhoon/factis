@@ -234,14 +234,13 @@ $rs2 = $result2->fetch_object();
 										<div class="post_img">
 											<div class="img_wrap">
 <?php
-						if($p->url){
+						if($p->youtube){
 					?>
-							<iframe style="width:100px;height:77px;" src="<?php echo $p->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe style="width:100px;height:77px;" src="<?php echo $p->youtube;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<?php
 						}else{
-						$thumbp=explode(",",$p->fn1);
 					?>
-						<img src="<?php echo $thumbp[0];?>"  style="width:100px;height:77px;" style="max-width:100%;">
+						<img src="<?php echo $p->thumb;?>"  style="width:100px;height:77px;" style="max-width:100%;">
 					<?php }?>
 											</div>
 										</div>
