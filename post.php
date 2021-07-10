@@ -233,14 +233,21 @@ $rs2 = $result2->fetch_object();
 									<div class="single_post widgets_small">
 										<div class="post_img">
 											<div class="img_wrap">
-												<a href="#">
-													<img src="assets/img/header/widget/tab1.jpg" alt="">
-												</a>
+<?php
+						if($p->url){
+					?>
+							<iframe style="width:100px;height:77px;" src="<?php echo $p->url;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<?php
+						}else{
+						$thumbp=explode(",",$p->fn1);
+					?>
+						<img src="<?php echo $thumbp[0];?>"  style="width:100px;height:77px;" style="max-width:100%;">
+					<?php }?>
 											</div>
 										</div>
 										<div class="single_post_text">
 											<div class="meta2 meta_separator1">	<a href="#"><?php echo $p->cate;?></a>
-												<a href="#">March 26, 2020</a>
+												<a href="#"><?php echo date("Y.m.d",strtotime($p->reg_date));?></a>
 											</div>
 											<h4><a href="post.php?id=<?php echo $p->id;?>"><?php echo $p->title;?></a></h4>
 										</div>
