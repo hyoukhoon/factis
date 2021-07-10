@@ -267,14 +267,20 @@ $rs2 = $result2->fetch_object();
 									<div class="single_post widgets_small">
 										<div class="post_img">
 											<div class="img_wrap">
-												<a href="#">
-													<img src="assets/img/header/widget/tab1.jpg" alt="">
-												</a>
+											<?php
+						if($c->youtube){
+					?>
+							<iframe style="width:100px;height:77px;" src="<?php echo $c->youtube;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<?php
+						}else{
+					?>
+						<img src="<?php echo $c->thumb;?>"  style="width:100px;height:77px;" style="max-width:100%;">
+					<?php }?>
 											</div>
 										</div>
 										<div class="single_post_text">
 											<div class="meta2 meta_separator1">	<a href="#"><?php echo $c->cate;?></a>
-												<a href="#">March 26, 2020</a>
+												<a href="#"><?php echo date("Y.m.d",strtotime($c->reg_date));?></a>
 											</div>
 											<h4><a href="post.php?id=<?php echo $c->id;?>"><?php echo $c->title;?></a></h4>
 										</div>
@@ -293,14 +299,20 @@ $rs2 = $result2->fetch_object();
 									<div class="single_post widgets_small">
 										<div class="post_img">
 											<div class="img_wrap">
-												<a href="#">
-													<img src="assets/img/header/widget/tab1.jpg" alt="">
-												</a>
+											<?php
+						if($t->youtube){
+					?>
+							<iframe style="width:100px;height:77px;" src="<?php echo $t->youtube;?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<?php
+						}else{
+					?>
+						<img src="<?php echo $t->thumb;?>"  style="width:100px;height:77px;" style="max-width:100%;">
+					<?php }?>
 											</div>
 										</div>
 										<div class="single_post_text">
 											<div class="meta2 meta_separator1">	<a href="#"><?php echo $t->cate;?></a>
-												<a href="#">March 26, 2020</a>
+												<a href="#"><?php echo date("Y.m.d",strtotime($t->reg_date));?></a>
 											</div>
 											<h4><a href="post.php?id=<?php echo $t->id;?>"><?php echo $t->title;?></a></h4>
 										</div>
